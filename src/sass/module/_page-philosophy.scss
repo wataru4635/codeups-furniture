@@ -1,0 +1,103 @@
+@use 'global' as *;
+
+.page-philosophy {
+  padding-top: rem(45);
+  padding-bottom: rem(36);
+  @include mq('md') {
+    padding-top: rem(40);
+    padding-bottom: rem(125);
+
+  }
+}
+
+.page-philosophy__inner {
+  max-width: rem(600);
+  position: relative;
+}
+
+.page-philosophy__inner::before {
+  content: "";
+  display: block;
+  background: url(../images/common/philosophy-bg_sp.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  width: 17.07%;
+  height: 105%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  @include mq('md') {
+    background: url(../images/common/philosophy-bg_pc.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 138.6%;
+    right: -40%;
+    top: -14%;
+    width: 50%;
+
+  }
+}
+
+.page-philosophy__container {
+  @include mq('md') {
+    display: grid;
+    grid-template-columns: 0.9fr 1.006fr;
+    margin-top: rem(40);
+    }
+}
+
+.page-philosophy__left {
+  margin: 0 auto;
+  @include mq('md') {
+  margin: 0;
+  max-width: 100%;
+  padding-right: rem(46);
+  }
+}
+
+.page-philosophy__title {
+  font-size: rem(32);
+  font-weight: 400;
+  font-family: $base-font-family;
+  color: $text-color;
+  margin-top: rem(28);
+  @include mq('md') {
+  font-size: rem(40);
+  margin-top: rem(80);
+  }
+}
+
+.page-philosophy__text {
+  font-size: rem(16);
+  font-weight: 400;
+  font-family: $base-font-family;
+  color: $text-color;
+  margin-top: rem(16);
+}
+
+
+.page-philosophy__right-img {
+  margin-top: rem(40);
+  display: flex;
+  justify-content: right;
+  @include mq('md') {
+  margin-top: 0;
+  align-items: center;
+  }
+}
+
+.page-philosophy__right-img img{
+  aspect-ratio: 280/282;
+  height: 100%;
+  width: rem(282);
+  object-fit: cover;
+  @include mq('md') {
+  aspect-ratio: 455/458;
+  width: rem(455);
+  height: rem(458);
+  }
+}

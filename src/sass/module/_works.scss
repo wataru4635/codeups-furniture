@@ -1,0 +1,67 @@
+@use 'global' as *;
+
+.works__inner {
+  position: relative;
+}
+
+.works__inner::before {
+  content: "";
+  display: block;
+  background: url(../images/common/works-bg_sp.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  width: 17.1%;
+  height: 31.93%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  
+  @include mq('md') {
+    background: url(../images/common/works-bg_pc.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 50%;
+    height: 92.03%;
+    right: -41%;  }
+}
+
+.works__inner {
+  max-width: rem(600);
+}
+
+.works__block {
+  @include mq('md') {
+    display: grid;
+    grid-template-columns: rem(278) 53%;
+    gap: rem(18);
+  }
+}
+
+.works__text {
+  margin-top: rem(40);
+  font-size: rem(16);
+  font-weight: 400;
+  color: $text-color;
+  font-family: $base-font-family;
+  @include mq('md') {
+    margin-top: rem(18);
+  }
+}
+
+.works__button {
+  margin-top: rem(24);
+  
+  @include mq('md') {
+    margin-top: rem(14);
+  }
+}
+
+.works__gallery {
+  margin-top: rem(40);
+  @include mq('md') {
+    margin-top: rem(80);
+  }
+}

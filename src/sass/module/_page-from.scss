@@ -1,0 +1,15 @@
+@use 'global' as *;
+
+.page-from {
+  padding-top: rem(40);
+  padding-bottom: rem(272);
+  position: relative;
+  background-image: url(../images/common/page-from_bg-sp.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  @include mq(md){
+      padding: rem(80) 0 rem(347);
+      background-image: url(../images/common/page-from_bg-pc.jpg);
+  }
+}

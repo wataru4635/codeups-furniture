@@ -1,0 +1,115 @@
+@use "global" as *;
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: rem(12);
+}
+
+.pagination__pager {
+  width: rem(36);
+  height: rem(36);
+  font-size: rem(18);
+  font-weight: 400;
+  font-family: $base-font-family;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $text-color;
+  transition: color .2s,background-color .2s;
+}
+
+.pagination__pager:hover {
+  color: $white;
+  background-color: $accent-color;
+}
+
+.pagination__pager.current {
+  color: $white;
+  background-color: $accent-color;
+}
+
+.pagination__pager--pc {
+  display: none;
+  @include mq('md') {
+  display: inline-flex;
+  }
+}
+
+.pagination__prev {
+  width: rem(36);
+  height: rem(36);
+  margin-right: rem(28);
+  position: relative;
+  transition: all .2s;
+}
+
+.pagination__prev::after {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-left: 1px solid $text-color;
+  border-bottom: 1px solid $text-color;
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%,-50%)  rotate(45deg);
+  transition: all .2s;
+}
+
+.pagination__prev:hover::after {
+  border-left: 1px solid $white;
+  border-bottom: 1px solid $white;
+}
+
+.pagination__prev:hover {
+  background-color: $accent-color;
+}
+
+
+.pagination__next {
+  width: rem(36);
+  height: rem(36);
+  margin-left: rem(28);
+  position: relative;
+  transition: all .2s;
+}
+
+.pagination__next::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-top: 1px solid $text-color;
+  border-right: 1px solid $text-color;
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%,-50%)  rotate(45deg);
+  transition: all .2s;
+}
+
+
+.pagination__next:hover::after {
+  border-top: 1px solid $white;
+  border-right: 1px solid $white;
+}
+
+.pagination__next:hover {
+  background-color: $accent-color;
+}
+
+.pagination__pager--single {
+  width: 100%;
+  transition: opacity .3s;
+  @include mq('md') {
+    width: initial;
+  }
+}
+
+.pagination__pager--single:hover {
+  color: initial;
+  background-color: initial;
+  opacity: .7;
+}

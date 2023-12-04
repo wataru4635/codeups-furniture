@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="robots" content="noindex" />
+  <!-- meta情報 -->
+  <title>CodeUps</title>
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <!-- ogp -->
+  <meta property="og:title" content="" />
+  <meta property="og:type" content="" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="" />
+  <meta property="og:site_name" content="" />
+  <meta property="og:description" content="" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap"
+    rel="stylesheet">
+  <!-- ファビコン -->
+  <link rel="”icon”" href="" />
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <!-- css -->
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <!-- JavaScript -->
+  <script defer src="https://code.jquery.com/jquery-1.9.1.min.js"
+    integrity="sha256-wS9gmOZBqsqWxgIVgA8Y9WcQOa7PgSIX+rPA0VL2rbQ=" crossorigin="anonymous"></script>
+  <script defer src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js"></script>
+
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+  <script defer src="./assets/js/jquery.inview.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script defer src="./assets/js/script.js"></script>
+</head>
+
+<body>
+
+  <!---- header ---->
+
+  <header class="header top-header js-header">
+    <div class="header__inner">
+      <h1 class="header__logo">
+        <a href="/" class="header__logoLink">
+          <img src="./assets/images/common/logo.svg" alt="ロゴ画像" />
+        </a>
+      </h1>
+      <div class="header__drawer hamburger js-hamburger">
+        <span></span>
+        <span></span>
+      </div>
+      <nav class="header__nav nav">
+        <div class="nav__container">
+          <div class="nav__wrapper">
+            <div class="nav__logo">
+              <a href="/" class="header__logoLink">
+                <img src="./assets/images/common/logo.svg" alt="ロゴ画像" />
+              </a>
+            </div>
+            <ul class="nav__items">
+              <li class="nav__item">
+                <a href="page-about.html">
+                  <p class="nav__en-title">About</p>
+                  <p class="nav__jp-title">私たちについて</p>
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="page-products.html">
+                  <p class="nav__en-title">Products</p>
+                  <p class="nav__jp-title">商品紹介</p>
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="page-works.html">
+                  <p class="nav__en-title">Works</p>
+                  <p class="nav__jp-title">納品事例</p>
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="page-company.html">
+                  <p class="nav__en-title">Company</p>
+                  <p class="nav__jp-title">会社概要</p>
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="page-news.html">
+                  <p class="nav__en-title">News</p>
+                  <p class="nav__jp-title">ニュース</p>
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="page-contact.html">
+                  <p class="nav__en-title">Contact</p>
+                  <p class="nav__jp-title">お問い合わせ</p>
+                </a>
+              </li>
+            </ul>
+            <div class="nav__sns">
+              <div class="nav__sns-instagram">
+                <a href="https://www.instagram.com" target="_blank">
+                  <img src="./assets/images/common/instagram.svg" alt="instagram" />
+                </a>
+              </div>
+              <div class="nav__sns-twitter">
+                <a href="https://twitter.com/?lang=ja" target="_blank">
+                  <img src="./assets/images/common/twitter.svg" alt="twitter" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <!-- single -->
+
+    <section class="single">
+      <div class="single__inner inner">
+        <div class="single__mv">
+          <h1 class="single__mv-title single__mv-title--news">ミラノサローネ</h1>
+          <time class="single__mv-time" datetime="2023-05-15">2023,05,15</time>
+          <div class="single__mv-container">
+            <div class="single__mv-sns u-desktop">
+              <div class="single__mv-sns-instagram">
+                <a href="https://www.instagram.com">
+                  <img src="./assets/images/common/instagram.svg" alt="instagram" />
+                </a>
+              </div>
+              <div class="single__mv-sns-twitter">
+                <a href="https://twitter.com/?lang=ja">
+                  <img src="./assets/images/common/twitter.svg" alt="twitter" />
+                </a>
+              </div>
+            </div>
+            <div class="single__mv-img">
+              <img src="./assets/images/common/single-mv.jpg" alt="ミラノの街の中心でありシンボルとなっている大聖堂ドゥオモの画像" />
+            </div>
+          </div>
+        </div>
+        <div class="single__block">
+          <p>
+            ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+          </p>
+          <img src="./assets/images/common/single-img.jpg" alt="おしゃれなインテリア置いた空間" />
+          <p>
+            ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+          </p>
+          <ul>
+            <li>リスト</li>
+            <li>リスト</li>
+            <li>リスト</li>
+          </ul>
+          <p>
+            ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+          </p>
+          <div class="single__pagination pagination">
+            <a href="#" class="pagination__prev pagination__prev--single"></a>
+            <a href="page-news.html" class="pagination__pager pagination__pager--single">一覧に戻る</a>
+            <a href="#" class="pagination__next pagination__next--single"></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- recommend -->
+
+    <div class="recommend sub-recommend">
+      <div class="recommend__inner inner">
+        <div class="recommend__header section-header">
+          <p class="section-header__engtitle">recommend</p>
+          <h2 class="section-header__jptitle">おすすめ商品</h2>
+        </div>
+        <div class="recommend__swiper">
+          <div class="products-swiper swiper js-products-swiper">
+            <ul class="products-swiper__cards swiper-wrapper">
+              <li class="products-swiper__card swiper-slide">
+                <img src="./assets/images/common/products-img_1.jpg" alt="省略">
+                <p class="products-swiper__name">アンティークソファ</p>
+                <p class="products-swiper__cuntry">US</p>
+              </li>
+              <li class="products-swiper__card swiper-slide">
+                <img src="./assets/images/common/products-img_2.jpg" alt="省略">
+                <p class="products-swiper__name">アンティークソファ</p>
+                <p class="products-swiper__cuntry">France</p>
+              </li>
+              <li class="products-swiper__card swiper-slide">
+                <img src="./assets/images/common/products-img_3.jpg" alt="省略">
+                <p class="products-swiper__name">アンティークソファ</p>
+                <p class="products-swiper__cuntry">Italia</p>
+              </li>
+              <li class="products-swiper__card swiper-slide">
+                <img src="./assets/images/common/products-img_4.jpg" alt="省略">
+                <p class="products-swiper__name">アンティークチェア</p>
+                <p class="products-swiper__cuntry">Sweden</p>
+              </li>
+              <li class="products-swiper__card swiper-slide">
+                <img src="./assets/images/common/products-img_5.jpg" alt="省略">
+                <p class="products-swiper__name">アンティークソファ</p>
+                <p class="products-swiper__cuntry">US</p>
+              </li>
+              <li class="products-swiper__card swiper-slide">
+                <img src="./assets/images/common/products-img_6.jpg" alt="省略">
+                <p class="products-swiper__name">アンティークソファ</p>
+                <p class="products-swiper__cuntry">Australia</p>
+              </li>
+              <li class="products-swiper__card swiper-slide">
+                <img src="./assets/images/common/products-img_7.jpg" alt="省略">
+                <p class="products-swiper__name">アンティークテーブル</p>
+                <p class="products-swiper__cuntry">France</p>
+              </li>
+              <li class="products-swiper__card swiper-slide">
+                <img src="./assets/images/common/products-img_8.jpg" alt="省略">
+                <p class="products-swiper__name">ソファ</p>
+                <p class="products-swiper__cuntry">US</p>
+              </li>
+              <li class="products-swiper__card swiper-slide">
+                <img src="./assets/images/common/products-img_9.jpg" alt="省略">
+                <p class="products-swiper__name">ソファ</p>
+                <p class="products-swiper__cuntry">US</p>
+              </li>
+              <li class="products-swiper__card swiper-slide">
+                <img src="./assets/images/common/products-img_10.jpg" alt="省略">
+                <p class="products-swiper__name">ソファ</p>
+                <p class="products-swiper__cuntry">Italia</p>
+              </li>
+              <li class="products-swiper__card swiper-slide">
+                <img src="./assets/images/common/products-img_11.jpg" alt="省略">
+                <p class="products-swiper__name">テーブル</p>
+                <p class="products-swiper__cuntry">France</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="recommend__controller swiper-button">
+          <div class="swiper-button__prev js-swiper-button-prev">
+            <img src="./assets/images/common/swiper-arrow-prev.png" alt="左に進むボタン" />
+          </div>
+          <div class="swiper-button__next js-swiper-button-next">
+            <img src="./assets/images/common/swiper-arrow-next.png" alt="右に進むボタン" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- new post -->
+
+    <section class="newpost sub-newpost">
+      <div class="newpost__inner inner">
+        <div class="newpost__header section-header">
+          <p class="section-header__engtitle">new&nbsp;<span>post</span></p>
+          <h2 class="section-header__jptitle">最新ニュース</h2>
+        </div>
+        <div class="swiper newpost__swiper js-newpost-swiper">
+          <div class="swiper-wrapper newpost__cards">
+            <a href="single.html" class="swiper-slide newpost__card news-card">
+              <div class="news-card__header">
+                <figure class="news-card__img">
+                  <img src="./assets/images/common/news-img_1.jpg" alt="ミラノの街の中心でありシンボルとなっている大聖堂ドゥオモの画像" />
+                </figure>
+              </div>
+              <div class="news-card__body">
+                <time class="news-card__time" datetime="2023-05-15">2023,05,15</time>
+                <h3 class="news-card__title">4月にミラノで開催された...</h3>
+                <p class="news-card-category">New</p>
+                <p class="news-card__text">
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+                  <br>ここにテキストが入ります。
+                </p>
+              </div>
+            </a>
+            <a href="#" class="swiper-slide newpost__card news-card">
+              <div class="news-card__header">
+                <figure class="news-card__img">
+                  <img src="./assets/images/common/news-img_2.jpg" alt="アンティーク家具の画像" />
+                </figure>
+              </div>
+              <div class="news-card__body">
+                <time class="news-card__time" datetime="2023-05-09">2023,05,09</time>
+                <h3 class="news-card__title">パリよりアンティークの...</h3>
+                <p class="news-card__text">
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+                  <br>ここにテキストが入ります。
+                </p>
+              </div>
+            </a>
+            <a href="#" class="swiper-slide newpost__card news-card">
+              <div class="news-card__header">
+                <figure class="news-card__img">
+                  <img src="./assets/images/common/news-img_3.jpg" alt="水色のおしゃれなソファーの画像" />
+                </figure>
+              </div>
+              <div class="news-card__body">
+                <time class="news-card__time" datetime="2023-04-19">2023,04,19</time>
+                <h3 class="news-card__title">タイトルが入ります。</h3>
+                <p class="news-card__text">
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
+                </p>
+              </div>
+            </a>
+            <a href="#" class="swiper-slide newpost__card news-card">
+              <div class="news-card__header">
+                <figure class="news-card__img">
+                  <img src="./assets/images/common/news-img_5.jpg" alt="グレーのおしゃれなソファーの画像" />
+                </figure>
+              </div>
+              <div class="news-card__body">
+                <time class="news-card__time" datetime="2023-03-22">2023,03,22</time>
+                <h3 class="news-card__title">タイトルが入ります。</h3>
+                <p class="news-card__text">
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+                  <br>ここにテキストが入ります。
+                </p>
+              </div>
+            </a>
+            <a href="#" class="swiper-slide newpost__card news-card">
+              <div class="news-card__header">
+                <figure class="news-card__img">
+                  <img src="./assets/images/common/news-img_6.jpg" alt="アンティーク調の照明の画像" />
+                </figure>
+              </div>
+              <div class="news-card__body">
+                <time class="news-card__time" datetime="2023-03-12">2023,03,12</time>
+                <h3 class="news-card__title">タイトルが入ります。</h3>
+                <p class="news-card__text">
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+                  <br>ここにテキストが入ります。
+                </p>
+              </div>
+            </a>
+            <a href="#" class="swiper-slide newpost__card news-card">
+              <div class="news-card__header">
+                <figure class="news-card__img">
+                  <img src="./assets/images/common/news-img_7.jpg" alt="おしゃれなリビングルームの画像" />
+                </figure>
+              </div>
+              <div class="news-card__body">
+                <time class="news-card__time" datetime="2023-02-27">2023,02,27</time>
+                <h3 class="news-card__title">タイトルが入ります。</h3>
+                <p class="news-card__text">
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
+                </p>
+              </div>
+            </a>
+            <a href="#" class="swiper-slide newpost__card news-card">
+              <div class="news-card__header">
+                <figure class="news-card__img">
+                  <img src="./assets/images/common/news-img_8.jpg" alt="インテリア家具の画像" />
+                </figure>
+              </div>
+              <div class="news-card__body">
+                <time class="news-card__time" datetime="2023-02-16">2023,02,16</time>
+                <h3 class="news-card__title">タイトルが入ります。</h3>
+                <p class="news-card__text">
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+                  <br>ここにテキストが入ります。
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="newpost__controller swiper-button">
+          <div class="swiper-button__prev js-newpost-swiper-button-prev">
+            <img src="./assets/images/common/swiper-arrow-prev.png" alt="左に進むボタン" />
+          </div>
+          <div class="swiper-button__next js-newpost-swiper-button-next">
+            <img src="./assets/images/common/swiper-arrow-next.png" alt="右に進むボタン" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <!---- footer ---->
+
+  <footer class="footer top-footer">
+    <div class="footer__inner">
+      <div class="footer__container">
+        <div class="footer__company">
+          <div class="footer__company-header section-header">
+            <p class="section-header__engtitle">company</p>
+            <h2 class="section-header__jptitle section-header__jptitle--footer">会社概要</h2>
+          </div>
+          <div class="footer__company-button">
+            <a href="page-company.html" class="section-button">view more</a>
+          </div>
+        </div>
+        <div class="footer__contact">
+          <div class="footer__contact-header section-header">
+            <p class="section-header__engtitle">contact</p>
+            <h2 class="section-header__jptitle section-header__jptitle--footer">お問い合わせ</h2>
+          </div>
+          <div class="footer__contact-button">
+            <a href="page-contact.html" class="section-button">view more</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__wrapper">
+        <div class="footer__left">
+          <div class="footer__logo">
+            <a href="/" class="footer__logoLink">
+              <img src="./assets/images/common/logo.svg" alt="ロゴ画像" />
+            </a>
+          </div>
+          <ul class="footer__info-lists">
+            <li class="footer__info-list">株式会社 Code Ups</li>
+            <li class="footer__info-list">東京都港区1-1</li>
+            <a href="tel:011011011" class="footer__info-list">TEL:011-011-011</a>
+            <li class="footer__info-list">受付時間9:00-17:00</li>
+          </ul>
+        </div>
+        <div class="footer__right">
+          <div class="footer__nav">
+            <a class="footer__nav-home" href="/">Home</a>
+            <ul class="footer__nav-items">
+              <li class="footer__nav-item"><a href="page-about.html">About</a></li>
+              <li class="footer__nav-item"><a href="page-products.html">Products</a></li>
+              <li class="footer__nav-item"><a href="page-works.html">Works</a></li>
+              <li class="footer__nav-item"><a href="page-company.html">Company</a></li>
+              <li class="footer__nav-item"><a href="page-news.html">News</a></li>
+              <li class="footer__nav-item"><a href="page-contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer__copyright">
+            <small>&copy;2023 code ups.</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

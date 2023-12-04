@@ -1,0 +1,92 @@
+@use 'global' as *;
+
+.products {
+  position: relative;
+}
+
+.products::before {
+  content: "";
+  display: block;
+  background: url(../images/common/products-bg_sp.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  width: 97.5%;
+  height: 58.4%;
+  top: rem(-40);
+  left: 0;
+  z-index: -1;
+  
+  @include mq('md') {
+    background: url(../images/common/products-bg_pc.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 78vw;
+    top: rem(-50);
+    height: 69.3%;
+  }
+}
+
+.products__inner {
+  max-width: rem(600);
+}
+
+.products__block {
+  @include mq('md') {
+    display: grid;
+    grid-template-columns: rem(278) 0.73fr;
+  }
+}
+
+.products__text {
+  margin-top: rem(40);
+  font-size: rem(16);
+  font-weight: 400;
+  color: $text-color;
+  font-family: $base-font-family;
+  padding-right: rem(16);
+  
+  @include mq('md') {
+    margin-top: rem(18);
+  }
+}
+
+.products__button {
+  margin-top: rem(24);
+  
+  @include mq('md') {
+    margin-top: rem(14);
+  }
+}
+
+.products__swiper {
+  margin-top: rem(88);
+  margin-right: calc(50% - 50vw);
+  margin-left: calc(50% - 50vw);
+  
+  @include mq('md') {
+    margin-right: 0;
+    margin-left: 0;
+    margin-top: rem(40);
+  }
+}
+
+.products__controller {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: rem(40);
+  gap: rem(64);
+
+  @include mq('md') {
+    position: absolute;
+    top: 22%;
+    right: 10%;
+    justify-content: right;
+    width: 0;
+    gap: rem(40);
+  }
+}

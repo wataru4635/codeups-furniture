@@ -43,19 +43,7 @@
 </head>
 
 <body>
-  <div class="loading">
-    <div class="loading__border"></div>
-    <div class="loading__img-top">
-      <img src="./assets/images/common/loading-top.jpg" alt="ロゴ画像" />
-    </div>
-    <div class="loading__img-bottom">
-      <picture>
-        <source media="(max-width: 767px)" srcset="./assets/images/common/loading-bottom_sp.jpg" type="image/jpeg" />
-        <source media="(min-width: 768px)" srcset="./assets/images/common/loading-bottom.jpg" type="image/jpeg" />
-        <img src="./assets/images/common/loading-bottom_sp.jpg" alt="おしゃれなインテリアを置いた部屋の様子" />
-      </picture>
-    </div>
-    </div>
+
   <!---- header ---->
 
   <header class="header top-header js-header">
@@ -73,7 +61,7 @@
         <div class="nav__container">
           <div class="nav__wrapper">
             <div class="nav__logo">
-              <a href="#" class="header__logoLink">
+              <a href="/" class="header__logoLink">
                 <img src="./assets/images/common/logo.svg" alt="ロゴ画像" />
               </a>
             </div>
@@ -134,185 +122,58 @@
     </div>
   </header>
   <main>
+    <!-- 下層ページのメインビュー -->
 
-    <!---- mv ---->
-
-    <section class="mv top-mv">
-      <div class="mv__inner">
-        <div class="mv__header inview fadeIn_up">
-          <p class="mv__text">Simplicity is
-            <br>the keynote
-            <br>of all true elegance.</p>
-        </div>
-        <div class="mv__body">
-          <div class="mv__sns u-desktop">
-            <div class="mv__sns-instagram">
+    <section class="sub-mv">
+      <div class="sub-mv__inner inner">
+        <h1 class="sub-mv__title">works</h1>
+        <div class="sub-mv__container">
+          <div class="sub-mv__sns u-desktop">
+            <div class="sub-mv__sns-instagram">
               <a href="https://www.instagram.com" target="_blank">
                 <img src="./assets/images/common/instagram.svg" alt="instagram" />
               </a>
             </div>
-            <div class="mv__sns-twitter">
+            <div class="sub-mv__sns-twitter">
               <a href="https://twitter.com/?lang=ja" target="_blank">
                 <img src="./assets/images/common/twitter.svg" alt="twitter" />
               </a>
             </div>
           </div>
-          <div class="mv__img inview fadeIn_up">
+          <div class="sub-mv__img">
             <picture>
-              <source media="(max-width: 767px)" srcset="./assets/images/common/mv-sp.jpg" type="image/jpeg" />
-              <source media="(min-width: 768px)" srcset="./assets/images/common/mv-pc.jpg" type="image/jpeg" />
-              <img src="./assets/images/common/mv-pc.jpg" alt="おしゃれなインテリアを置いた部屋の様子" />
+              <source media="(max-width: 767px)" srcset="./assets/images/common/works-mv_sp.jpg" type="image/jpeg" />
+              <source media="(min-width: 768px)" srcset="./assets/images/common/works-mv_pc.jpg" type="image/jpeg" />
+              <img src="./assets/images/common/works-mv_sp.jpg" alt="おしゃれなインテリアを置いた部屋の様子" />
             </picture>
           </div>
         </div>
-        <div class="mv__news inview fadeIn_up">
-          <div class="mv__news-head">
-            <p class="mv__news-label">NEW</p>
-          </div>
-          <div class="mv__news-body">
-            <time class="mv__time" datetime="2023-05-11">2023.05.11</time>
-            <p class="mv__news-text">4月にミラノで開催されたミラノサローネへ<span class="u-mobile">...</span><span
-                class="mv__news-textPc">行ってきました。</span>
-            </p>
-            <div class="mv__news-button">
-              <a href="single.html" class="section-button section-button--mv">view more</a>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
 
-    <!---- philosophy ---->
-
-    <section class="philosophy top-philosophy">
-      <div class="philosophy__inner inner">
-        <div class="philosophy__header section-header">
-          <p class="section-header__engtitle">our
-            <br>philosophy</p>
-          <h2 class="section-header__jptitle">理念</h2>
-        </div>
-        <div class="philosophy__container">
-          <div class="philosophy__left">
-            <h3 class="philosophy__title">無駄を省き、
-              <br>美しさを追求する。</h3>
-            <p class="philosophy__text">おしゃれなインテリアは、シンプルで洗練されたデザインに特徴があります。
-              <br>私たちは、無駄な要素を排除し、機能と美しさをバランス良く組み合わせることで、空間全体の美しさを引き立たせます。</p>
-            <div class="philosophy__button">
-              <a href="page-about.html" class="section-button">view more</a>
-            </div>
-          </div>
-          <div class="philosophy__right-img">
-            <img src="./assets/images/common/philosophy-img.png" alt="">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!---- products ---->
-
-    <section class="products top-products">
-      <div class="products__inner inner">
-        <div class="products__block">
-          <div class="products__header section-header">
-            <p class="section-header__engtitle">products</p>
-            <h2 class="section-header__jptitle">商品紹介</h2>
-          </div>
-          <p class="products__text">新しい季節のトレンドを反映した洗練されたインテリアアイテムが多く揃っています。
-            <br>シンプルで個性的なデザインと上質な素材が魅力です。リビングからベッドルームまで、あらゆるスペースに調和するアイテムを取り揃えていますのでおしゃれな空間を作りたい方にぴったりの一品を見つけてください。</p>
-        </div>
-        <div class="products__button">
-          <a href="page-products.html" class="section-button">view more</a>
-        </div>
-        <div class="products__swiper">
-          <div class="products-swiper swiper js-products-swiper">
-            <ul class="products-swiper__cards swiper-wrapper">
-              <li class="products-swiper__card swiper-slide">
-                <img src="./assets/images/common/products-img_1.jpg" alt="省略">
-                <p class="products-swiper__name">アンティークソファ</p>
-                <p class="products-swiper__cuntry">US</p>
-              </li>
-              <li class="products-swiper__card swiper-slide">
-                <img src="./assets/images/common/products-img_2.jpg" alt="省略">
-                <p class="products-swiper__name">アンティークソファ</p>
-                <p class="products-swiper__cuntry">France</p>
-              </li>
-              <li class="products-swiper__card swiper-slide">
-                <img src="./assets/images/common/products-img_3.jpg" alt="省略">
-                <p class="products-swiper__name">アンティークソファ</p>
-                <p class="products-swiper__cuntry">Italia</p>
-              </li>
-              <li class="products-swiper__card swiper-slide">
-                <img src="./assets/images/common/products-img_4.jpg" alt="省略">
-                <p class="products-swiper__name">アンティークチェア</p>
-                <p class="products-swiper__cuntry">Sweden</p>
-              </li>
-              <li class="products-swiper__card swiper-slide">
-                <img src="./assets/images/common/products-img_5.jpg" alt="省略">
-                <p class="products-swiper__name">アンティークソファ</p>
-                <p class="products-swiper__cuntry">US</p>
-              </li>
-              <li class="products-swiper__card swiper-slide">
-                <img src="./assets/images/common/products-img_6.jpg" alt="省略">
-                <p class="products-swiper__name">アンティークソファ</p>
-                <p class="products-swiper__cuntry">Australia</p>
-              </li>
-              <li class="products-swiper__card swiper-slide">
-                <img src="./assets/images/common/products-img_7.jpg" alt="省略">
-                <p class="products-swiper__name">アンティークテーブル</p>
-                <p class="products-swiper__cuntry">France</p>
-              </li>
-              <li class="products-swiper__card swiper-slide">
-                <img src="./assets/images/common/products-img_8.jpg" alt="省略">
-                <p class="products-swiper__name">ソファ</p>
-                <p class="products-swiper__cuntry">US</p>
-              </li>
-              <li class="products-swiper__card swiper-slide">
-                <img src="./assets/images/common/products-img_9.jpg" alt="省略">
-                <p class="products-swiper__name">ソファ</p>
-                <p class="products-swiper__cuntry">US</p>
-              </li>
-              <li class="products-swiper__card swiper-slide">
-                <img src="./assets/images/common/products-img_10.jpg" alt="省略">
-                <p class="products-swiper__name">ソファ</p>
-                <p class="products-swiper__cuntry">Italia</p>
-              </li>
-              <li class="products-swiper__card swiper-slide">
-                <img src="./assets/images/common/products-img_11.jpg" alt="省略">
-                <p class="products-swiper__name">テーブル</p>
-                <p class="products-swiper__cuntry">France</p>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="products__controller swiper-button">
-          <div class="swiper-button__prev">
-            <img src="./assets/images/common/swiper-arrow-prev.png" alt="左に進むボタン" />
-          </div>
-          <div class="swiper-button__next">
-            <img src="./assets/images/common/swiper-arrow-next.png" alt="右に進むボタン" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!---- works ---->
-
-    <section class="works top-works">
-      <div class="works__inner inner">
-        <div class="works__block">
-          <div class="works__header section-header">
+    <!-- page-works -->
+    <section class="page-works sub-works">
+      <div class="page-works__inner inner">
+        <div class="page-works__wrapper">
+          <div class="page-works__header section-header">
             <p class="section-header__engtitle">works</p>
-            <h2 class="section-header__jptitle">インテリアコーディネート</h2>
+            <h2 class="section-header__jptitle">インテリア<br class="u-desktop">コーディネート</h2>
+            <p class="section-header__text">これが
+              <br>私たちが作る世界です。</p>
           </div>
-          <p class="works__text">洗練されたカラーパレットとユニークなアクセントが深みと魅力を加えます。リビング、ダイニング、ベッドルームなどの部屋に合ったアイデアを提供します。
-            <br>上質な家具やスタイリッシュな照明、オシャレなアクセサリーで個性豊かな空間を創り上げましょう。インテリアの夢を叶える一歩を踏み出しましょう。</p>
+          <div class="page-works__img">
+            <picture>
+              <source media="(max-width: 767px)" srcset="./assets/images/common/page-works-img_sp.jpg"
+                type="image/jpeg" />
+              <source media="(min-width: 768px)" srcset="./assets/images/common/page-works-img_pc.jpg"
+                type="image/jpeg" />
+              <img src="./assets/images/common/page-works-img_sp.jpg" alt="おしゃれなインテリアを置いた部屋の様子" />
+            </picture>
+          </div>
         </div>
-        <div class="works__button">
-          <a href="page-works.html" class="section-button">view more</a>
-        </div>
-        <div class="works__gallery gallery">
+        <div class="page-works__gallery gallery">
           <div class="gallery__modal js-modal-event"></div>
-          <div class="gallery__images">
+          <div class="gallery__images gallery__images--twocolumn">
             <div class="gallery__img js-modal">
               <picture>
                 <source media="(max-width: 767px)" srcset="./assets/images/common/works-img_1-sp.jpg"
@@ -385,12 +246,50 @@
                 <img src="./assets/images/common/works-img_8-pc.jpg" alt="おしゃれなインテリアを置いた部屋の様子" />
               </picture>
             </div>
+            <div class="gallery__img js-modal">
+              <picture>
+                <source media="(max-width: 767px)" srcset="./assets/images/common/works-img_9-sp.jpg"
+                  type="image/jpeg" />
+                <source media="(min-width: 768px)" srcset="./assets/images/common/works-img_9-pc.jpg"
+                  type="image/jpeg" />
+                <img src="./assets/images/common/works-img_9-pc.jpg" alt="おしゃれなインテリアを置いた部屋の様子" />
+              </picture>
+            </div>
+            <div class="gallery__img js-modal">
+              <picture>
+                <source media="(max-width: 767px)" srcset="./assets/images/common/works-img_10-sp.jpg"
+                  type="image/jpeg" />
+                <source media="(min-width: 768px)" srcset="./assets/images/common/works-img_10-pc.jpg"
+                  type="image/jpeg" />
+                <img src="./assets/images/common/works-img_10-pc.jpg" alt="おしゃれなインテリアを置いた部屋の様子" />
+              </picture>
+            </div>
+            <div class="gallery__img js-modal">
+              <picture>
+                <source media="(max-width: 767px)" srcset="./assets/images/common/works-img_11-sp.jpg"
+                  type="image/jpeg" />
+                <source media="(min-width: 768px)" srcset="./assets/images/common/works-img_11-pc.jpg"
+                  type="image/jpeg" />
+                <img src="./assets/images/common/works-img_11-pc.jpg" alt="おしゃれなインテリアを置いた部屋の様子" />
+              </picture>
+            </div>
+            <div class="gallery__img js-modal">
+              <picture>
+                <source media="(max-width: 767px)" srcset="./assets/images/common/works-img_12-sp.jpg"
+                  type="image/jpeg" />
+                <source media="(min-width: 768px)" srcset="./assets/images/common/works-img_12-pc.jpg"
+                  type="image/jpeg" />
+                <img src="./assets/images/common/works-img_12-pc.jpg" alt="おしゃれなインテリアを置いた部屋の様子" />
+              </picture>
+            </div>
           </div>
         </div>
+
       </div>
     </section>
-  </main>
 
+
+  </main>
   <!---- footer ---->
 
   <footer class="footer top-footer">

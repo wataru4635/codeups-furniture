@@ -1,0 +1,30 @@
+@use 'global' as *;
+
+.hamburger span:nth-child(1) {
+  position: absolute;
+  width: inherit;
+  height: rem(2);
+  background-color: $accent-color;
+  top: 0%;
+  transition: all 0.3s;
+}
+.hamburger span:nth-child(2) {
+  position: absolute;
+  width: rem(30);
+  height: rem(2);
+  background-color: $accent-color;
+  transition: all 0.3s;
+  right: 0;
+  top: 50%;
+}
+
+.hamburger.is-show span:nth-child(1) {
+  top: 50%;
+  transform: rotate(13.87deg);
+}
+
+.hamburger.is-show span:nth-child(2) {
+  top: 50%;
+  transform: rotate(-13.87deg);
+  width: inherit;
+}

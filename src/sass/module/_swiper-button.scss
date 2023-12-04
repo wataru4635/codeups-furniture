@@ -1,0 +1,23 @@
+@use 'global' as *;
+
+.swiper-button__prev,
+.swiper-button__next {
+  position: initial;
+  width: rem(46);
+  height: rem(46);
+  margin: 0;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.swiper-button__prev img,
+.swiper-button__next img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.swiper-button__prev::after,
+.swiper-button__next::after {
+  display: none;
+}

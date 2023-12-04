@@ -1,0 +1,12 @@
+@use 'global' as *;
+
+.page-news__items {
+  margin-top: rem(28);
+  @include mq("md") {
+    margin-top: rem(80);
+  }
+}
+
+.page-news__pagination {
+  margin-top: rem(80);
+}

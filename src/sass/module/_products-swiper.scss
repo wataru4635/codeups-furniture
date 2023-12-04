@@ -1,0 +1,72 @@
+@use 'global' as *;
+
+.products-swiper {
+  position: relative;
+}
+
+.products-swiper .swiper-slide {
+  @include mq('md') {
+    transform: scale(.7);
+    transition: 1s;
+  }
+}
+
+.products-swiper .swiper-slide-active {
+  @include mq('md') {
+    transform: scale(1.04);
+  }
+}
+
+.products-swiper .swiper-slide img {
+  transition: box-shadow 1s;
+}
+
+.products-swiper .swiper-slide-active img {
+  box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.25);
+}
+
+.products-swiper__cards {
+  @include mq('md') {
+    padding-bottom: rem(10);
+  }
+}
+
+.products-swiper__card img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 264/176;
+  object-fit: contain;
+  
+  @include mq('md') {
+    aspect-ratio: 375/250;
+  }
+}
+
+.products-swiper__name {
+  font-size: rem(16);
+  font-family: $base-font-family;
+  font-weight: 400;
+  color: $text-color;
+  margin-top: rem(16);
+  padding-left: rem(8);
+  position: relative;
+}
+
+.products-swiper__name::before {
+  content: "";
+  display: inline-block;
+  position: relative;
+  background: #6F8471;
+  width: rem(6);
+  height: rem(6);
+  top: rem(-12);
+  left: 0;
+  border-radius: 50%;
+}
+
+.products-swiper__cuntry {
+  font-size: rem(14);
+  font-family: $english-font-family;
+  color: $text-color;
+  line-height: 1;
+}

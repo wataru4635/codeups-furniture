@@ -1,0 +1,27 @@
+@use 'global' as *;
+
+.newpost__header {
+  margin-top: rem(80);
+}
+
+.newpost__swiper {
+  padding-top:rem(40);
+}
+
+.newpost__card {
+  display: grid;
+  height: auto;
+}
+
+.newpost__controller {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: rem(40);
+  gap: rem(64);
+
+  @include mq('md') {
+    gap: rem(40);
+  }
+}

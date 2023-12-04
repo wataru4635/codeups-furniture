@@ -1,0 +1,88 @@
+@use 'global' as *;
+
+.page-products__inner {
+  max-width: rem(600);
+}
+
+.page-products__cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2列のグリッドを定義 */
+  gap: rem(15);
+  @include mq('md') {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 0;
+  margin-top: rem(100);
+  }
+}
+
+.page-products__header {
+  grid-column: span 2; /* 2列を占めるようにする */
+  margin-bottom: rem(25);
+  @include mq('md') {
+  grid-column: auto;
+  margin-bottom: 0;
+  padding-top: rem(42);
+  padding-left: rem(24);
+  padding-right: rem(24);
+  }
+}
+
+.page-products__card img {
+  width: 100%;
+  aspect-ratio: 165/110;
+  object-fit: contain;
+  
+  @include mq('md') {
+    aspect-ratio: 270/180;
+  }
+}
+
+.page-products__body {
+  padding-top: rem(12);
+  padding-bottom: rem(16);
+  padding-left: rem(8);
+  padding-right: rem(8);
+  background: #FAFAFA;
+  @include mq('md') {
+  padding-top: rem(24);
+  padding-left: rem(15);
+  padding-right: rem(15);
+  padding-bottom: rem(42);
+  }
+}
+
+.page-products__name {
+  font-size: rem(16);
+  font-family: $base-font-family;
+  font-weight: 400;
+  color: $text-color;
+  position: relative;
+}
+
+.page-products__name::before {
+  content: "";
+  display: inline-block;
+  position: relative;
+  background: #6F8471;
+  width: rem(6);
+  height: rem(6);
+  top: rem(-12);
+  left: 0;
+  border-radius: 50%;
+}
+
+.page-products__cuntry {
+  font-size: rem(14);
+  font-family: $english-font-family;
+  color: $text-color;
+  line-height: 1;
+}
+
+.page-products__text {
+  font-size: rem(14);
+  font-family: $base-font-family;
+  font-weight: 400;
+  color: $text-color;
+  margin-top: rem(8);
+}
+

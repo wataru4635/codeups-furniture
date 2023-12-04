@@ -1,0 +1,176 @@
+@use 'global' as *;
+
+.single__mv {
+  height: rem(436);
+  border-bottom: rem(1) solid $accent-color;
+  @include mq('md') {
+  height: rem(666);
+  }
+}
+
+.single__inner {
+  max-width: rem(600);
+  @include mq('md') {
+    max-width: rem(750);
+  }
+}
+
+
+.single__mv-title {
+  font-size: rem(32);
+  font-family: $base-font-family;
+  text-align: center;
+  font-weight: 400;
+  padding-top: rem(40);
+  @include mq('md') {
+  line-height: 1.25;
+  padding-top: rem(59);
+  }
+}
+
+
+.single__mv-time {
+  font-size: rem(16);
+  font-weight: 400;
+  text-align: center;
+  display: block;
+  font-family: $english-font-family;
+}
+
+.single__mv-container {
+  @include mq('md') {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+  }
+}
+
+.single__mv-sns{
+  @include mq('md') {
+    position: relative;
+    left: rem(-300);
+    width: 0;
+    bottom: rem(-20);
+  }
+}
+
+.single__mv-sns::before {
+  content: "";
+  display: block;
+  width: rem(1);
+  height: rem(180);
+  background-color: #151515;
+  position: absolute;
+  top: rem(-220);
+  left: rem(10);
+}
+
+.single__mv-sns a {
+  transition: opacity .3s;
+}
+
+.single__mv-sns a:hover {
+  opacity: .7;
+}
+
+.single__mv-sns-instagram {
+  width: rem(20);
+  margin: 0 auto;
+}
+
+.single__mv-sns-twitter{
+  width: rem(20);
+  margin: 0 auto;
+  padding-top: rem(40);
+}
+
+.single__mv-img {
+  padding-top: rem(40);
+}
+
+.single__mv-img img{
+    aspect-ratio: 345/259;
+    height: rem(259);
+    width: 100%;
+    object-fit: cover;
+    @include mq('md') {
+    aspect-ratio: 700/468;
+    height: 100%;
+    width: rem(700);
+    }
+  }
+
+  .single-mainContent__img {
+    margin-top: rem(24);
+    @include mq('md') {
+      margin-top: rem(40);
+    }
+  }
+  
+  .single-mainContent__img img{
+    width: 100%;
+    aspect-ratio: 700/468;
+    object-fit: cover;
+  }
+  
+  .single__block {
+  
+    img {
+      margin-top: rem(24);
+      width: 100%;
+      aspect-ratio: 700/468;
+      object-fit: cover;
+      @include mq('md') {
+      margin-top: rem(40);
+      }
+    }
+  
+    p {
+      line-height: 1.5;
+      font-size: rem(16);
+      color: $text-color;
+      margin-top: rem(24);
+      @include mq('md') {
+      margin-top: rem(40);
+      }
+    }
+
+    ul {
+      margin-top: rem(24);
+      @include mq('md') {
+      margin-top: rem(40);
+      }
+    }
+  
+    li {
+      padding-left: rem(16);
+      position: relative;
+    }
+    li::before {
+      content: "・";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+    }
+  }
+
+.single__pagination {
+  margin-top: rem(40);
+  @include mq('md') {
+  margin-top: rem(80);
+  }
+}
+
+.pagination__prev--single {
+  @include mq('md') {
+  margin-right: rem(130);
+  }
+}
+
+.pagination__next--single {
+  @include mq('md') {
+  margin-left: rem(130);
+  }
+}
+

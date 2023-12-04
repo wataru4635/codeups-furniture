@@ -1,0 +1,165 @@
+@use 'global'as *;
+
+.mv__inner {
+  padding: 0 rem(15);
+
+  @include mq('md') {
+    padding: 0;
+  }
+}
+
+.mv__header {
+  @include mq('md') {
+    width: 75%;
+    margin: 0 auto;
+  }
+}
+
+.mv__text {
+  color: $text-color;
+  font-family: $english-font-family;
+  font-size: rem(40);
+  font-weight: 400;
+  line-height: 1.25;
+
+  @include mq('md') {
+    font-size: rem(64);
+  }
+}
+
+.mv__body {
+  margin-top: rem(40);
+
+  @include mq('md') {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+  }
+}
+
+.mv__sns {
+  @include mq('md') {
+    width: 12.3%;
+    position: relative;
+    top: rem(-110);
+  }
+}
+
+.mv__sns::before {
+  content: "";
+  display: block;
+  width: rem(1);
+  height: rem(180);
+  background-color: #151515;
+  position: absolute;
+  top: rem(-220);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.mv__sns a {
+  transition: opacity .3s;
+}
+
+.mv__sns a:hover {
+  opacity: .7;
+}
+
+.mv__sns-instagram {
+    width: rem(20);
+    margin: 0 auto;
+  }
+
+.mv__sns-twitter {
+  width: rem(20);
+  margin: 0 auto;
+  padding-top: rem(40);
+}
+
+.mv__img {
+  margin-right: calc(50% - 50vw);
+
+  @include mq('md') {
+    width: 87.7%;
+  }
+}
+
+.mv__img img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 360/270;
+  object-fit: cover;
+
+  @include mq('md') {
+    aspect-ratio: 1260/480;
+  }
+}
+
+
+.mv__news {
+  background: rgba(21, 21, 21, 0.80);
+  margin-left: calc(50% - 50vw);
+  padding: rem(24) rem(15);
+  position: relative;
+  top: rem(-40);
+
+  @include mq('md') {
+    padding-top: rem(40);
+    padding-bottom: rem(40);
+    padding-left: rem(180);
+    padding-right: rem(80);
+    max-width: 65%;
+    top: rem(-70);
+  }
+}
+
+.mv__news-head {
+  line-height: 1;
+}
+
+.mv__news-label {
+  font-size: rem(10);
+  font-family: $english-font-family;
+  font-weight: 400;
+  line-height: 1;
+  color: #fff;
+  background-color: $accent-color;
+  display: inline-block;
+  padding: rem(3) rem(9);
+}
+
+.mv__news-body {
+  line-height: 1;
+}
+
+.mv__time {
+  color: #fff;
+  font-family: $english-font-family;
+  font-size: rem(14);
+  font-weight: 400;
+  line-height: 1;
+  margin-top: rem(2);
+}
+
+.mv__news-text {
+  color: #fff;
+  font-family: $base-font-family;
+  font-size: rem(16);
+  margin-top: rem(8);
+  border-bottom: rem(1) solid #eee;
+  padding-bottom: rem(12);
+}
+
+.mv__news-textPc {
+  display: none;
+
+  @include mq('md') {
+    display: inline-block;
+  }
+}
+
+.mv__news-button {
+  margin-top: rem(16);
+  text-align: right;
+  padding-right: rem(16);
+}

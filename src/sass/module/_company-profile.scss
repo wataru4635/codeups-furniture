@@ -1,0 +1,37 @@
+@use 'global' as *;
+
+.company-profile__list {
+  padding-top: rem(24);
+  padding-bottom: rem(24);
+  display: flex;
+  font-size: rem(13);
+  line-height: 1.25;
+  border-bottom: 1px solid #BABABA;
+  font-size: rem(16);
+  font-family: $base-font-family;
+  color: $text-color;
+  @include mq('md'){
+    padding-top: rem(40);
+    padding-bottom: rem(40);
+    padding-left: rem(40);
+  }
+}
+
+.company-profile__list:first-child {
+  border-top: 1px solid #BABABA;
+
+}
+
+.company-profile__term {
+  max-width: rem(120);
+  width: 100%;
+  flex-shrink: 0;
+  @include mq('md'){
+      max-width: rem(160);
+      letter-spacing: 0.5em;
+  }
+}
+
+.company-profile__text-bottom {
+  margin-top: rem(8);
+}

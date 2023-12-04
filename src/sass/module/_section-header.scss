@@ -1,0 +1,75 @@
+@use 'global' as *;
+
+.section-header {
+  display: inline-block;
+  line-height: 1.2;
+}
+
+.section-header__engtitle {
+  font-size: rem(40);
+  color: $text-color;
+  font-weight: 400;
+  font-family: $english-font-family;
+  text-transform: capitalize;
+  @include mq('md') {
+  font-size: rem(64);
+  line-height: 1.25;
+  }
+}
+
+.section-header__engtitle span {
+  text-transform: none;
+}
+
+.section-header__jptitle {
+  font-size: rem(16);
+  color: $text-color;
+  font-weight: 400;
+  font-family: $base-font-family;
+  padding-left: rem(88);
+  position: relative;
+  margin-top: rem(8);
+}
+
+.section-header__jptitle::before{
+  content:"";
+  display:block;
+  width:rem(80);
+  height:rem(1);
+  background-color: #151515;
+  position:absolute;
+  top:50%;
+  transform: translateY(-50%);
+  left: 0;
+}
+
+.section-header__jptitle.section-header__jptitle--footer::before {
+  display: none;
+  @include mq('md') {
+  display: block;
+  }
+}
+
+.section-header__jptitle.section-header__jptitle--footer {
+  padding-left: 0;
+  @include mq('md') {
+    padding-left: rem(100);
+  }
+}
+
+.section-header__text {
+  font-size: rem(16);
+  font-weight: 400;
+  color: $text-color;
+  font-family: $base-font-family;
+  margin-top: rem(16);
+  @include mq('md') {
+  margin-top: rem(80);
+  }
+}
+
+.section-header__text--mt {
+  @include mq('md') {
+  margin-top: rem(40);
+  }
+}
