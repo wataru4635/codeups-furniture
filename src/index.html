@@ -1,453 +1,639 @@
 <!DOCTYPE html>
 <html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="robots" content="noindex" />
+    <!-- meta情報 -->
+    <title>CodeUps</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <!-- ogp -->
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:description" content="" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- ファビコン -->
+    <link rel="”icon”" href="" />
+    <!-- Swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- JavaScript -->
+    <script
+      defer
+      src="https://code.jquery.com/jquery-1.9.1.min.js"
+      integrity="sha256-wS9gmOZBqsqWxgIVgA8Y9WcQOa7PgSIX+rPA0VL2rbQ="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js"
+    ></script>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-  <meta name="format-detection" content="telephone=no" />
-  <meta name="robots" content="noindex" />
-  <!-- meta情報 -->
-  <title>CodeUps</title>
-  <meta name="description" content="" />
-  <meta name="keywords" content="" />
-  <!-- ogp -->
-  <meta property="og:title" content="" />
-  <meta property="og:type" content="" />
-  <meta property="og:url" content="" />
-  <meta property="og:image" content="" />
-  <meta property="og:site_name" content="" />
-  <meta property="og:description" content="" />
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap"
-    rel="stylesheet">
-  <!-- ファビコン -->
-  <link rel="”icon”" href="" />
-  <!-- Swiper -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-  <!-- css -->
-  <link rel="stylesheet" href="./assets/css/style.css" />
-  <!-- JavaScript -->
-  <script defer src="https://code.jquery.com/jquery-1.9.1.min.js"
-    integrity="sha256-wS9gmOZBqsqWxgIVgA8Y9WcQOa7PgSIX+rPA0VL2rbQ=" crossorigin="anonymous"></script>
-  <script defer src="https://code.jquery.com/jquery-3.6.0.js"></script>
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"
+    ></script>
+    <script defer src="./assets/js/jquery.inview.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"
+    ></script>
+    <script defer src="./assets/js/script.js"></script>
+  </head>
 
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
-  <script defer src="./assets/js/jquery.inview.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-  <script defer src="./assets/js/script.js"></script>
-</head>
-
-<body>
-  <div class="loading">
-    <div class="loading__border"></div>
-    <div class="loading__img-top">
-      <img src="./assets/images/common/loading-top.jpg" alt="ロゴ画像" />
-    </div>
-    <div class="loading__img-bottom">
-      <picture>
-        <source media="(max-width: 767px)" srcset="./assets/images/common/loading-bottom_sp.jpg" type="image/jpeg" />
-        <source media="(min-width: 768px)" srcset="./assets/images/common/loading-bottom.jpg" type="image/jpeg" />
-        <img src="./assets/images/common/loading-bottom_sp.jpg" alt="おしゃれなインテリアを置いた部屋の様子" />
-      </picture>
-    </div>
-    </div>
-  <!---- header ---->
-
-  <header class="header top-header js-header">
-    <div class="header__inner">
-      <h1 class="header__logo">
-        <a href="/" class="header__logoLink">
-          <img src="./assets/images/common/logo.svg" alt="ロゴ画像" />
-        </a>
-      </h1>
-      <div class="header__drawer hamburger js-hamburger">
-        <span></span>
-        <span></span>
+  <body>
+    <div class="loading">
+      <div class="loading__border"></div>
+      <div class="loading__img-top">
+        <img src="./assets/images/common/loading-top.jpg" alt="ロゴ画像" />
       </div>
-      <nav class="header__nav nav">
-        <div class="nav__container">
-          <div class="nav__wrapper">
-            <div class="nav__logo">
-              <a href="#" class="header__logoLink">
+      <div class="loading__img-bottom">
+        <picture>
+          <source
+            media="(max-width: 767px)"
+            srcset="./assets/images/common/loading-bottom_sp.jpg"
+            type="image/jpeg"
+          />
+          <source
+            media="(min-width: 768px)"
+            srcset="./assets/images/common/loading-bottom.jpg"
+            type="image/jpeg"
+          />
+          <img
+            src="./assets/images/common/loading-bottom_sp.jpg"
+            alt="おしゃれなインテリアを置いた部屋の様子"
+          />
+        </picture>
+      </div>
+    </div>
+    <!---- header ---->
+
+    <header class="header top-header js-header">
+      <div class="header__inner">
+        <h1 class="header__logo">
+          <a href="/" class="header__logoLink">
+            <img src="./assets/images/common/logo.svg" alt="ロゴ画像" />
+          </a>
+        </h1>
+        <div class="header__drawer hamburger js-hamburger">
+          <span></span>
+          <span></span>
+        </div>
+        <nav class="header__nav nav">
+          <div class="nav__container">
+            <div class="nav__wrapper">
+              <div class="nav__logo">
+                <a href="#" class="header__logoLink">
+                  <img src="./assets/images/common/logo.svg" alt="ロゴ画像" />
+                </a>
+              </div>
+              <ul class="nav__items">
+                <li class="nav__item">
+                  <a href="page-about.html">
+                    <p class="nav__en-title">About</p>
+                    <p class="nav__jp-title">私たちについて</p>
+                  </a>
+                </li>
+                <li class="nav__item">
+                  <a href="page-products.html">
+                    <p class="nav__en-title">Products</p>
+                    <p class="nav__jp-title">商品紹介</p>
+                  </a>
+                </li>
+                <li class="nav__item">
+                  <a href="page-works.html">
+                    <p class="nav__en-title">Works</p>
+                    <p class="nav__jp-title">納品事例</p>
+                  </a>
+                </li>
+                <li class="nav__item">
+                  <a href="page-company.html">
+                    <p class="nav__en-title">Company</p>
+                    <p class="nav__jp-title">会社概要</p>
+                  </a>
+                </li>
+                <li class="nav__item">
+                  <a href="page-news.html">
+                    <p class="nav__en-title">News</p>
+                    <p class="nav__jp-title">ニュース</p>
+                  </a>
+                </li>
+                <li class="nav__item">
+                  <a href="page-contact.html">
+                    <p class="nav__en-title">Contact</p>
+                    <p class="nav__jp-title">お問い合わせ</p>
+                  </a>
+                </li>
+              </ul>
+              <div class="nav__sns">
+                <div class="nav__sns-instagram">
+                  <a href="https://www.instagram.com" target="_blank">
+                    <img
+                      src="./assets/images/common/instagram.png"
+                      alt="instagram"
+                    />
+                  </a>
+                </div>
+                <div class="nav__sns-twitter">
+                  <a href="https://twitter.com/?lang=ja" target="_blank">
+                    <img
+                      src="./assets/images/common/twitter.png"
+                      alt="twitter"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <!---- mv ---->
+
+      <section class="mv top-mv">
+        <div class="mv__inner">
+          <div class="mv__header inview fadeIn_up">
+            <p class="mv__text">
+              Simplicity is <br />the keynote <br />of all true elegance.
+            </p>
+          </div>
+          <div class="mv__body">
+            <div class="mv__sns u-desktop">
+              <div class="mv__sns-instagram">
+                <a href="https://www.instagram.com" target="_blank">
+                  <img
+                  src="./assets/images/common/instagram.svg"
+                  alt="instagram"
+                />                </a>
+              </div>
+              <div class="mv__sns-twitter">
+                <a href="https://twitter.com/?lang=ja" target="_blank">
+                  <img src="./assets/images/common/twitter.png" alt="twitter" />
+                </a>
+              </div>
+            </div>
+            <div class="mv__img inview fadeIn_up">
+              <picture>
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./assets/images/common/mv-sp.jpg"
+                  type="image/jpeg"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./assets/images/common/mv-pc.jpg"
+                  type="image/jpeg"
+                />
+                <img
+                  src="./assets/images/common/mv-pc.jpg"
+                  alt="おしゃれなインテリアを置いた部屋の様子"
+                />
+              </picture>
+            </div>
+          </div>
+          <div class="mv__news inview fadeIn_up">
+            <div class="mv__news-head">
+              <p class="mv__news-label">NEW</p>
+            </div>
+            <div class="mv__news-body">
+              <time class="mv__time" datetime="2023-05-11">2023.05.11</time>
+              <p class="mv__news-text">
+                4月にミラノで開催されたミラノサローネへ<span class="u-mobile"
+                  >...</span
+                ><span class="mv__news-textPc">行ってきました。</span>
+              </p>
+              <div class="mv__news-button">
+                <a href="single.html" class="section-button section-button--mv"
+                  >view more</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!---- philosophy ---->
+
+      <section class="philosophy top-philosophy">
+        <div class="philosophy__inner inner">
+          <div class="philosophy__header section-header">
+            <p class="section-header__engtitle">our <br />philosophy</p>
+            <h2 class="section-header__jptitle">理念</h2>
+          </div>
+          <div class="philosophy__container">
+            <div class="philosophy__left">
+              <h3 class="philosophy__title">
+                無駄を省き、 <br />美しさを追求する。
+              </h3>
+              <p class="philosophy__text">
+                おしゃれなインテリアは、シンプルで洗練されたデザインに特徴があります。
+                <br />私たちは、無駄な要素を排除し、機能と美しさをバランス良く組み合わせることで、空間全体の美しさを引き立たせます。
+              </p>
+              <div class="philosophy__button">
+                <a href="page-about.html" class="section-button">view more</a>
+              </div>
+            </div>
+            <div class="philosophy__right-img">
+              <img src="./assets/images/common/philosophy-img.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!---- products ---->
+
+      <section class="products top-products">
+        <div class="products__inner inner">
+          <div class="products__block">
+            <div class="products__header section-header">
+              <p class="section-header__engtitle">products</p>
+              <h2 class="section-header__jptitle">商品紹介</h2>
+            </div>
+            <p class="products__text">
+              新しい季節のトレンドを反映した洗練されたインテリアアイテムが多く揃っています。
+              <br />シンプルで個性的なデザインと上質な素材が魅力です。リビングからベッドルームまで、あらゆるスペースに調和するアイテムを取り揃えていますのでおしゃれな空間を作りたい方にぴったりの一品を見つけてください。
+            </p>
+          </div>
+          <div class="products__button">
+            <a href="page-products.html" class="section-button">view more</a>
+          </div>
+          <div class="products__swiper">
+            <div class="products-swiper swiper js-products-swiper">
+              <ul class="products-swiper__cards swiper-wrapper">
+                <li class="products-swiper__card swiper-slide">
+                  <img
+                    src="./assets/images/common/products-img_1.jpg"
+                    alt="省略"
+                  />
+                  <p class="products-swiper__name">アンティークソファ</p>
+                  <p class="products-swiper__cuntry">US</p>
+                </li>
+                <li class="products-swiper__card swiper-slide">
+                  <img
+                    src="./assets/images/common/products-img_2.jpg"
+                    alt="省略"
+                  />
+                  <p class="products-swiper__name">アンティークソファ</p>
+                  <p class="products-swiper__cuntry">France</p>
+                </li>
+                <li class="products-swiper__card swiper-slide">
+                  <img
+                    src="./assets/images/common/products-img_3.jpg"
+                    alt="省略"
+                  />
+                  <p class="products-swiper__name">アンティークソファ</p>
+                  <p class="products-swiper__cuntry">Italia</p>
+                </li>
+                <li class="products-swiper__card swiper-slide">
+                  <img
+                    src="./assets/images/common/products-img_4.jpg"
+                    alt="省略"
+                  />
+                  <p class="products-swiper__name">アンティークチェア</p>
+                  <p class="products-swiper__cuntry">Sweden</p>
+                </li>
+                <li class="products-swiper__card swiper-slide">
+                  <img
+                    src="./assets/images/common/products-img_5.jpg"
+                    alt="省略"
+                  />
+                  <p class="products-swiper__name">アンティークソファ</p>
+                  <p class="products-swiper__cuntry">US</p>
+                </li>
+                <li class="products-swiper__card swiper-slide">
+                  <img
+                    src="./assets/images/common/products-img_6.jpg"
+                    alt="省略"
+                  />
+                  <p class="products-swiper__name">アンティークソファ</p>
+                  <p class="products-swiper__cuntry">Australia</p>
+                </li>
+                <li class="products-swiper__card swiper-slide">
+                  <img
+                    src="./assets/images/common/products-img_7.jpg"
+                    alt="省略"
+                  />
+                  <p class="products-swiper__name">アンティークテーブル</p>
+                  <p class="products-swiper__cuntry">France</p>
+                </li>
+                <li class="products-swiper__card swiper-slide">
+                  <img
+                    src="./assets/images/common/products-img_8.jpg"
+                    alt="省略"
+                  />
+                  <p class="products-swiper__name">ソファ</p>
+                  <p class="products-swiper__cuntry">US</p>
+                </li>
+                <li class="products-swiper__card swiper-slide">
+                  <img
+                    src="./assets/images/common/products-img_9.jpg"
+                    alt="省略"
+                  />
+                  <p class="products-swiper__name">ソファ</p>
+                  <p class="products-swiper__cuntry">US</p>
+                </li>
+                <li class="products-swiper__card swiper-slide">
+                  <img
+                    src="./assets/images/common/products-img_10.jpg"
+                    alt="省略"
+                  />
+                  <p class="products-swiper__name">ソファ</p>
+                  <p class="products-swiper__cuntry">Italia</p>
+                </li>
+                <li class="products-swiper__card swiper-slide">
+                  <img
+                    src="./assets/images/common/products-img_11.jpg"
+                    alt="省略"
+                  />
+                  <p class="products-swiper__name">テーブル</p>
+                  <p class="products-swiper__cuntry">France</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="products__controller swiper-button">
+            <div class="swiper-button__prev">
+              <img
+                src="./assets/images/common/swiper-arrow-prev.png"
+                alt="左に進むボタン"
+              />
+            </div>
+            <div class="swiper-button__next">
+              <img
+                src="./assets/images/common/swiper-arrow-next.png"
+                alt="右に進むボタン"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!---- works ---->
+
+      <section class="works top-works">
+        <div class="works__inner inner">
+          <div class="works__block">
+            <div class="works__header section-header">
+              <p class="section-header__engtitle">works</p>
+              <h2 class="section-header__jptitle">インテリアコーディネート</h2>
+            </div>
+            <p class="works__text">
+              洗練されたカラーパレットとユニークなアクセントが深みと魅力を加えます。リビング、ダイニング、ベッドルームなどの部屋に合ったアイデアを提供します。
+              <br />上質な家具やスタイリッシュな照明、オシャレなアクセサリーで個性豊かな空間を創り上げましょう。インテリアの夢を叶える一歩を踏み出しましょう。
+            </p>
+          </div>
+          <div class="works__button">
+            <a href="page-works.html" class="section-button">view more</a>
+          </div>
+          <div class="works__gallery gallery">
+            <div class="gallery__modal js-modal-event"></div>
+            <div class="gallery__images">
+              <div class="gallery__img js-modal">
+                <picture>
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="./assets/images/common/works-img_1-sp.jpg"
+                    type="image/jpeg"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="./assets/images/common/works-img_1-pc.jpg"
+                    type="image/jpeg"
+                  />
+                  <img
+                    src="./assets/images/common/works-img_1-pc.jpg"
+                    alt="おしゃれなインテリアを置いた部屋の様子"
+                  />
+                </picture>
+              </div>
+              <div class="gallery__img js-modal">
+                <picture>
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="./assets/images/common/works-img_2-sp.jpg"
+                    type="image/jpeg"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="./assets/images/common/works-img_2-pc.jpg"
+                    type="image/jpeg"
+                  />
+                  <img
+                    src="./assets/images/common/works-img_2-pc.jpg"
+                    alt="おしゃれなインテリアを置いた部屋の様子"
+                  />
+                </picture>
+              </div>
+              <div class="gallery__img js-modal">
+                <picture>
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="./assets/images/common/works-img_3-sp.jpg"
+                    type="image/jpeg"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="./assets/images/common/works-img_3-pc.jpg"
+                    type="image/jpeg"
+                  />
+                  <img
+                    src="./assets/images/common/works-img_3-pc.jpg"
+                    alt="おしゃれなインテリアを置いた部屋の様子"
+                  />
+                </picture>
+              </div>
+              <div class="gallery__img js-modal">
+                <picture>
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="./assets/images/common/works-img_4-sp.jpg"
+                    type="image/jpeg"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="./assets/images/common/works-img_4-pc.jpg"
+                    type="image/jpeg"
+                  />
+                  <img
+                    src="./assets/images/common/works-img_4-pc.jpg"
+                    alt="おしゃれなインテリアを置いた部屋の様子"
+                  />
+                </picture>
+              </div>
+              <div class="gallery__img js-modal">
+                <picture>
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="./assets/images/common/works-img_5-sp.jpg"
+                    type="image/jpeg"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="./assets/images/common/works-img_5-pc.jpg"
+                    type="image/jpeg"
+                  />
+                  <img
+                    src="./assets/images/common/works-img_5-pc.jpg"
+                    alt="おしゃれなインテリアを置いた部屋の様子"
+                  />
+                </picture>
+              </div>
+              <div class="gallery__img js-modal">
+                <picture>
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="./assets/images/common/works-img_6-sp.jpg"
+                    type="image/jpeg"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="./assets/images/common/works-img_6-pc.jpg"
+                    type="image/jpeg"
+                  />
+                  <img
+                    src="./assets/images/common/works-img_6-pc.jpg"
+                    alt="おしゃれなインテリアを置いた部屋の様子"
+                  />
+                </picture>
+              </div>
+              <div class="gallery__img js-modal">
+                <picture>
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="./assets/images/common/works-img_7-sp.jpg"
+                    type="image/jpeg"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="./assets/images/common/works-img_7-pc.jpg"
+                    type="image/jpeg"
+                  />
+                  <img
+                    src="./assets/images/common/works-img_7-pc.jpg"
+                    alt="おしゃれなインテリアを置いた部屋の様子"
+                  />
+                </picture>
+              </div>
+              <div class="gallery__img js-modal">
+                <picture>
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="./assets/images/common/works-img_8-sp.jpg"
+                    type="image/jpeg"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="./assets/images/common/works-img_8-pc.jpg"
+                    type="image/jpeg"
+                  />
+                  <img
+                    src="./assets/images/common/works-img_8-pc.jpg"
+                    alt="おしゃれなインテリアを置いた部屋の様子"
+                  />
+                </picture>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!---- footer ---->
+
+    <footer class="footer top-footer">
+      <div class="footer__inner">
+        <div class="footer__container">
+          <div class="footer__company">
+            <div class="footer__company-header section-header">
+              <p class="section-header__engtitle">company</p>
+              <h2
+                class="section-header__jptitle section-header__jptitle--footer"
+              >
+                会社概要
+              </h2>
+            </div>
+            <div class="footer__company-button">
+              <a href="page-company.html" class="section-button">view more</a>
+            </div>
+          </div>
+          <div class="footer__contact">
+            <div class="footer__contact-header section-header">
+              <p class="section-header__engtitle">contact</p>
+              <h2
+                class="section-header__jptitle section-header__jptitle--footer"
+              >
+                お問い合わせ
+              </h2>
+            </div>
+            <div class="footer__contact-button">
+              <a href="page-contact.html" class="section-button">view more</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__wrapper">
+          <div class="footer__left">
+            <div class="footer__logo">
+              <a href="/" class="footer__logoLink">
                 <img src="./assets/images/common/logo.svg" alt="ロゴ画像" />
               </a>
             </div>
-            <ul class="nav__items">
-              <li class="nav__item">
-                <a href="page-about.html">
-                  <p class="nav__en-title">About</p>
-                  <p class="nav__jp-title">私たちについて</p>
-                </a>
-              </li>
-              <li class="nav__item">
-                <a href="page-products.html">
-                  <p class="nav__en-title">Products</p>
-                  <p class="nav__jp-title">商品紹介</p>
-                </a>
-              </li>
-              <li class="nav__item">
-                <a href="page-works.html">
-                  <p class="nav__en-title">Works</p>
-                  <p class="nav__jp-title">納品事例</p>
-                </a>
-              </li>
-              <li class="nav__item">
-                <a href="page-company.html">
-                  <p class="nav__en-title">Company</p>
-                  <p class="nav__jp-title">会社概要</p>
-                </a>
-              </li>
-              <li class="nav__item">
-                <a href="page-news.html">
-                  <p class="nav__en-title">News</p>
-                  <p class="nav__jp-title">ニュース</p>
-                </a>
-              </li>
-              <li class="nav__item">
-                <a href="page-contact.html">
-                  <p class="nav__en-title">Contact</p>
-                  <p class="nav__jp-title">お問い合わせ</p>
-                </a>
-              </li>
-            </ul>
-            <div class="nav__sns">
-              <div class="nav__sns-instagram">
-                <a href="https://www.instagram.com" target="_blank">
-                  <img src="./assets/images/common/instagram.svg" alt="instagram" />
-                </a>
-              </div>
-              <div class="nav__sns-twitter">
-                <a href="https://twitter.com/?lang=ja" target="_blank">
-                  <img src="./assets/images/common/twitter.svg" alt="twitter" />
-                </a>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </nav>
-    </div>
-  </header>
-  <main>
-
-    <!---- mv ---->
-
-    <section class="mv top-mv">
-      <div class="mv__inner">
-        <div class="mv__header inview fadeIn_up">
-          <p class="mv__text">Simplicity is
-            <br>the keynote
-            <br>of all true elegance.</p>
-        </div>
-        <div class="mv__body">
-          <div class="mv__sns u-desktop">
-            <div class="mv__sns-instagram">
-              <a href="https://www.instagram.com" target="_blank">
-                <img src="./assets/images/common/instagram.svg" alt="instagram" />
-              </a>
-            </div>
-            <div class="mv__sns-twitter">
-              <a href="https://twitter.com/?lang=ja" target="_blank">
-                <img src="./assets/images/common/twitter.svg" alt="twitter" />
-              </a>
-            </div>
-          </div>
-          <div class="mv__img inview fadeIn_up">
-            <picture>
-              <source media="(max-width: 767px)" srcset="./assets/images/common/mv-sp.jpg" type="image/jpeg" />
-              <source media="(min-width: 768px)" srcset="./assets/images/common/mv-pc.jpg" type="image/jpeg" />
-              <img src="./assets/images/common/mv-pc.jpg" alt="おしゃれなインテリアを置いた部屋の様子" />
-            </picture>
-          </div>
-        </div>
-        <div class="mv__news inview fadeIn_up">
-          <div class="mv__news-head">
-            <p class="mv__news-label">NEW</p>
-          </div>
-          <div class="mv__news-body">
-            <time class="mv__time" datetime="2023-05-11">2023.05.11</time>
-            <p class="mv__news-text">4月にミラノで開催されたミラノサローネへ<span class="u-mobile">...</span><span
-                class="mv__news-textPc">行ってきました。</span>
-            </p>
-            <div class="mv__news-button">
-              <a href="single.html" class="section-button section-button--mv">view more</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!---- philosophy ---->
-
-    <section class="philosophy top-philosophy">
-      <div class="philosophy__inner inner">
-        <div class="philosophy__header section-header">
-          <p class="section-header__engtitle">our
-            <br>philosophy</p>
-          <h2 class="section-header__jptitle">理念</h2>
-        </div>
-        <div class="philosophy__container">
-          <div class="philosophy__left">
-            <h3 class="philosophy__title">無駄を省き、
-              <br>美しさを追求する。</h3>
-            <p class="philosophy__text">おしゃれなインテリアは、シンプルで洗練されたデザインに特徴があります。
-              <br>私たちは、無駄な要素を排除し、機能と美しさをバランス良く組み合わせることで、空間全体の美しさを引き立たせます。</p>
-            <div class="philosophy__button">
-              <a href="page-about.html" class="section-button">view more</a>
-            </div>
-          </div>
-          <div class="philosophy__right-img">
-            <img src="./assets/images/common/philosophy-img.png" alt="">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!---- products ---->
-
-    <section class="products top-products">
-      <div class="products__inner inner">
-        <div class="products__block">
-          <div class="products__header section-header">
-            <p class="section-header__engtitle">products</p>
-            <h2 class="section-header__jptitle">商品紹介</h2>
-          </div>
-          <p class="products__text">新しい季節のトレンドを反映した洗練されたインテリアアイテムが多く揃っています。
-            <br>シンプルで個性的なデザインと上質な素材が魅力です。リビングからベッドルームまで、あらゆるスペースに調和するアイテムを取り揃えていますのでおしゃれな空間を作りたい方にぴったりの一品を見つけてください。</p>
-        </div>
-        <div class="products__button">
-          <a href="page-products.html" class="section-button">view more</a>
-        </div>
-        <div class="products__swiper">
-          <div class="products-swiper swiper js-products-swiper">
-            <ul class="products-swiper__cards swiper-wrapper">
-              <li class="products-swiper__card swiper-slide">
-                <img src="./assets/images/common/products-img_1.jpg" alt="省略">
-                <p class="products-swiper__name">アンティークソファ</p>
-                <p class="products-swiper__cuntry">US</p>
-              </li>
-              <li class="products-swiper__card swiper-slide">
-                <img src="./assets/images/common/products-img_2.jpg" alt="省略">
-                <p class="products-swiper__name">アンティークソファ</p>
-                <p class="products-swiper__cuntry">France</p>
-              </li>
-              <li class="products-swiper__card swiper-slide">
-                <img src="./assets/images/common/products-img_3.jpg" alt="省略">
-                <p class="products-swiper__name">アンティークソファ</p>
-                <p class="products-swiper__cuntry">Italia</p>
-              </li>
-              <li class="products-swiper__card swiper-slide">
-                <img src="./assets/images/common/products-img_4.jpg" alt="省略">
-                <p class="products-swiper__name">アンティークチェア</p>
-                <p class="products-swiper__cuntry">Sweden</p>
-              </li>
-              <li class="products-swiper__card swiper-slide">
-                <img src="./assets/images/common/products-img_5.jpg" alt="省略">
-                <p class="products-swiper__name">アンティークソファ</p>
-                <p class="products-swiper__cuntry">US</p>
-              </li>
-              <li class="products-swiper__card swiper-slide">
-                <img src="./assets/images/common/products-img_6.jpg" alt="省略">
-                <p class="products-swiper__name">アンティークソファ</p>
-                <p class="products-swiper__cuntry">Australia</p>
-              </li>
-              <li class="products-swiper__card swiper-slide">
-                <img src="./assets/images/common/products-img_7.jpg" alt="省略">
-                <p class="products-swiper__name">アンティークテーブル</p>
-                <p class="products-swiper__cuntry">France</p>
-              </li>
-              <li class="products-swiper__card swiper-slide">
-                <img src="./assets/images/common/products-img_8.jpg" alt="省略">
-                <p class="products-swiper__name">ソファ</p>
-                <p class="products-swiper__cuntry">US</p>
-              </li>
-              <li class="products-swiper__card swiper-slide">
-                <img src="./assets/images/common/products-img_9.jpg" alt="省略">
-                <p class="products-swiper__name">ソファ</p>
-                <p class="products-swiper__cuntry">US</p>
-              </li>
-              <li class="products-swiper__card swiper-slide">
-                <img src="./assets/images/common/products-img_10.jpg" alt="省略">
-                <p class="products-swiper__name">ソファ</p>
-                <p class="products-swiper__cuntry">Italia</p>
-              </li>
-              <li class="products-swiper__card swiper-slide">
-                <img src="./assets/images/common/products-img_11.jpg" alt="省略">
-                <p class="products-swiper__name">テーブル</p>
-                <p class="products-swiper__cuntry">France</p>
-              </li>
+            <ul class="footer__info-lists">
+              <li class="footer__info-list">株式会社 Code Ups</li>
+              <li class="footer__info-list">東京都港区1-1</li>
+              <a href="tel:011011011" class="footer__info-list"
+                >TEL:011-011-011</a
+              >
+              <li class="footer__info-list">受付時間9:00-17:00</li>
             </ul>
           </div>
-        </div>
-        <div class="products__controller swiper-button">
-          <div class="swiper-button__prev">
-            <img src="./assets/images/common/swiper-arrow-prev.png" alt="左に進むボタン" />
-          </div>
-          <div class="swiper-button__next">
-            <img src="./assets/images/common/swiper-arrow-next.png" alt="右に進むボタン" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!---- works ---->
-
-    <section class="works top-works">
-      <div class="works__inner inner">
-        <div class="works__block">
-          <div class="works__header section-header">
-            <p class="section-header__engtitle">works</p>
-            <h2 class="section-header__jptitle">インテリアコーディネート</h2>
-          </div>
-          <p class="works__text">洗練されたカラーパレットとユニークなアクセントが深みと魅力を加えます。リビング、ダイニング、ベッドルームなどの部屋に合ったアイデアを提供します。
-            <br>上質な家具やスタイリッシュな照明、オシャレなアクセサリーで個性豊かな空間を創り上げましょう。インテリアの夢を叶える一歩を踏み出しましょう。</p>
-        </div>
-        <div class="works__button">
-          <a href="page-works.html" class="section-button">view more</a>
-        </div>
-        <div class="works__gallery gallery">
-          <div class="gallery__modal js-modal-event"></div>
-          <div class="gallery__images">
-            <div class="gallery__img js-modal">
-              <picture>
-                <source media="(max-width: 767px)" srcset="./assets/images/common/works-img_1-sp.jpg"
-                  type="image/jpeg" />
-                <source media="(min-width: 768px)" srcset="./assets/images/common/works-img_1-pc.jpg"
-                  type="image/jpeg" />
-                <img src="./assets/images/common/works-img_1-pc.jpg" alt="おしゃれなインテリアを置いた部屋の様子" />
-              </picture>
+          <div class="footer__right">
+            <div class="footer__nav">
+              <a class="footer__nav-home" href="/">Home</a>
+              <ul class="footer__nav-items">
+                <li class="footer__nav-item">
+                  <a href="page-about.html">About</a>
+                </li>
+                <li class="footer__nav-item">
+                  <a href="page-products.html">Products</a>
+                </li>
+                <li class="footer__nav-item">
+                  <a href="page-works.html">Works</a>
+                </li>
+                <li class="footer__nav-item">
+                  <a href="page-company.html">Company</a>
+                </li>
+                <li class="footer__nav-item">
+                  <a href="page-news.html">News</a>
+                </li>
+                <li class="footer__nav-item">
+                  <a href="page-contact.html">Contact</a>
+                </li>
+              </ul>
             </div>
-            <div class="gallery__img js-modal">
-              <picture>
-                <source media="(max-width: 767px)" srcset="./assets/images/common/works-img_2-sp.jpg"
-                  type="image/jpeg" />
-                <source media="(min-width: 768px)" srcset="./assets/images/common/works-img_2-pc.jpg"
-                  type="image/jpeg" />
-                <img src="./assets/images/common/works-img_2-pc.jpg" alt="おしゃれなインテリアを置いた部屋の様子" />
-              </picture>
-            </div>
-            <div class="gallery__img js-modal">
-              <picture>
-                <source media="(max-width: 767px)" srcset="./assets/images/common/works-img_3-sp.jpg"
-                  type="image/jpeg" />
-                <source media="(min-width: 768px)" srcset="./assets/images/common/works-img_3-pc.jpg"
-                  type="image/jpeg" />
-                <img src="./assets/images/common/works-img_3-pc.jpg" alt="おしゃれなインテリアを置いた部屋の様子" />
-              </picture>
-            </div>
-            <div class="gallery__img js-modal">
-              <picture>
-                <source media="(max-width: 767px)" srcset="./assets/images/common/works-img_4-sp.jpg"
-                  type="image/jpeg" />
-                <source media="(min-width: 768px)" srcset="./assets/images/common/works-img_4-pc.jpg"
-                  type="image/jpeg" />
-                <img src="./assets/images/common/works-img_4-pc.jpg" alt="おしゃれなインテリアを置いた部屋の様子" />
-              </picture>
-            </div>
-            <div class="gallery__img js-modal">
-              <picture>
-                <source media="(max-width: 767px)" srcset="./assets/images/common/works-img_5-sp.jpg"
-                  type="image/jpeg" />
-                <source media="(min-width: 768px)" srcset="./assets/images/common/works-img_5-pc.jpg"
-                  type="image/jpeg" />
-                <img src="./assets/images/common/works-img_5-pc.jpg" alt="おしゃれなインテリアを置いた部屋の様子" />
-              </picture>
-            </div>
-            <div class="gallery__img js-modal">
-              <picture>
-                <source media="(max-width: 767px)" srcset="./assets/images/common/works-img_6-sp.jpg"
-                  type="image/jpeg" />
-                <source media="(min-width: 768px)" srcset="./assets/images/common/works-img_6-pc.jpg"
-                  type="image/jpeg" />
-                <img src="./assets/images/common/works-img_6-pc.jpg" alt="おしゃれなインテリアを置いた部屋の様子" />
-              </picture>
-            </div>
-            <div class="gallery__img js-modal">
-              <picture>
-                <source media="(max-width: 767px)" srcset="./assets/images/common/works-img_7-sp.jpg"
-                  type="image/jpeg" />
-                <source media="(min-width: 768px)" srcset="./assets/images/common/works-img_7-pc.jpg"
-                  type="image/jpeg" />
-                <img src="./assets/images/common/works-img_7-pc.jpg" alt="おしゃれなインテリアを置いた部屋の様子" />
-              </picture>
-            </div>
-            <div class="gallery__img js-modal">
-              <picture>
-                <source media="(max-width: 767px)" srcset="./assets/images/common/works-img_8-sp.jpg"
-                  type="image/jpeg" />
-                <source media="(min-width: 768px)" srcset="./assets/images/common/works-img_8-pc.jpg"
-                  type="image/jpeg" />
-                <img src="./assets/images/common/works-img_8-pc.jpg" alt="おしゃれなインテリアを置いた部屋の様子" />
-              </picture>
+            <div class="footer__copyright">
+              <small>&copy;2023 code ups.</small>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  </main>
-
-  <!---- footer ---->
-
-  <footer class="footer top-footer">
-    <div class="footer__inner">
-      <div class="footer__container">
-        <div class="footer__company">
-          <div class="footer__company-header section-header">
-            <p class="section-header__engtitle">company</p>
-            <h2 class="section-header__jptitle section-header__jptitle--footer">会社概要</h2>
-          </div>
-          <div class="footer__company-button">
-            <a href="page-company.html" class="section-button">view more</a>
-          </div>
-        </div>
-        <div class="footer__contact">
-          <div class="footer__contact-header section-header">
-            <p class="section-header__engtitle">contact</p>
-            <h2 class="section-header__jptitle section-header__jptitle--footer">お問い合わせ</h2>
-          </div>
-          <div class="footer__contact-button">
-            <a href="page-contact.html" class="section-button">view more</a>
-          </div>
-        </div>
-      </div>
-      <div class="footer__wrapper">
-        <div class="footer__left">
-          <div class="footer__logo">
-            <a href="/" class="footer__logoLink">
-              <img src="./assets/images/common/logo.svg" alt="ロゴ画像" />
-            </a>
-          </div>
-          <ul class="footer__info-lists">
-            <li class="footer__info-list">株式会社 Code Ups</li>
-            <li class="footer__info-list">東京都港区1-1</li>
-            <a href="tel:011011011" class="footer__info-list">TEL:011-011-011</a>
-            <li class="footer__info-list">受付時間9:00-17:00</li>
-          </ul>
-        </div>
-        <div class="footer__right">
-          <div class="footer__nav">
-            <a class="footer__nav-home" href="/">Home</a>
-            <ul class="footer__nav-items">
-              <li class="footer__nav-item"><a href="page-about.html">About</a></li>
-              <li class="footer__nav-item"><a href="page-products.html">Products</a></li>
-              <li class="footer__nav-item"><a href="page-works.html">Works</a></li>
-              <li class="footer__nav-item"><a href="page-company.html">Company</a></li>
-              <li class="footer__nav-item"><a href="page-news.html">News</a></li>
-              <li class="footer__nav-item"><a href="page-contact.html">Contact</a></li>
-            </ul>
-          </div>
-          <div class="footer__copyright">
-            <small>&copy;2023 code ups.</small>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-</body>
-
+    </footer>
+  </body>
 </html>

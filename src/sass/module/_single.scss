@@ -48,7 +48,7 @@
 .single__mv-sns{
   @include mq('md') {
     position: relative;
-    left: rem(-300);
+    left: -15vw;
     width: 0;
     bottom: rem(-20);
   }
@@ -74,14 +74,14 @@
 }
 
 .single__mv-sns-instagram {
-  width: rem(20);
+  width: rem(24);
   margin: 0 auto;
 }
 
 .single__mv-sns-twitter{
-  width: rem(20);
+  width: rem(26);
   margin: 0 auto;
-  padding-top: rem(40);
+  padding-top: rem(24);
 }
 
 .single__mv-img {
