@@ -229,8 +229,8 @@ jQuery(function ($) { // この中であれば WordPress でも「$」が使用�
   // ローディング要素の取得
   let loading = document.querySelector('.loading');
   let loadingBorder = document.querySelector('.loading__border');
-  let topImage = document.querySelector(".loading__img-top img");
-  let bottomImage = document.querySelector(".loading__img-bottom img");
+  let topImage = document.querySelector(".loading__img-top");
+  let bottomImage = document.querySelector(".loading__img-bottom");
 
   // 最終アクセス時刻の取得
   let lastAccessTime = Cookies.get("lastAccessTime");

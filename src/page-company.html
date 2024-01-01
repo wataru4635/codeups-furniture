@@ -1,348 +1,305 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <meta name="format-detection" content="telephone=no" />
-    <meta name="robots" content="noindex" />
-    <!-- meta情報 -->
-    <title>CodeUps</title>
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-    <!-- ogp -->
-    <meta property="og:title" content="" />
-    <meta property="og:type" content="" />
-    <meta property="og:url" content="" />
-    <meta property="og:image" content="" />
-    <meta property="og:site_name" content="" />
-    <meta property="og:description" content="" />
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <!-- ファビコン -->
-    <link rel="”icon”" href="" />
-    <!-- Swiper -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
-    />
-    <!-- css -->
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <!-- JavaScript -->
-    <script
-      defer
-      src="https://code.jquery.com/jquery-1.9.1.min.js"
-      integrity="sha256-wS9gmOZBqsqWxgIVgA8Y9WcQOa7PgSIX+rPA0VL2rbQ="
-      crossorigin="anonymous"
-    ></script>
-    <script defer src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script
-      defer
-      src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js"
-    ></script>
 
-    <script
-      defer
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"
-    ></script>
-    <script defer src="./assets/js/jquery.inview.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script
-      defer
-      src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"
-    ></script>
-    <script defer src="./assets/js/script.js"></script>
-  </head>
-  <body>
-    <!---- header ---->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="robots" content="noindex" />
+  <!-- meta情報 -->
+  <title>CodeUps</title>
+  <meta name="description"
+    content="CodeUpsは、洗練されたデザインと高品質な素材を使用した家具を提供しています。リビングルーム、ダイニング、寝室など、各部屋に合った多彩な家具を取り揃えており、お客様のライフスタイルやインテリアのニーズに合った最適な家具を見つけるお手伝いをいたします。豊富な選択肢とお手ごろな価格で、理想の空間を演出する家具を提供しています" />
+  <meta name="keywords" content="家具, インテリア, ソファ, ダイニングテーブル, ベッド, オフィス家具, モダン家具, クラシック家具, 快適な家具, 高品質家具" />
+  <!-- ogp -->
+  <meta property="og:title" content="CodeUps - 高品質な家具を提供する家具屋" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://codeups-furniture.ix-code.com/page-company.html" />
+  <meta property="og:image" content="https://codeups-furniture.ix-code.com/assets/images/common/mv-pc.jpg" />
+  <meta property="og:site_name" content="CodeUps Furniture" />
+  <meta property="og:description" content="CodeUpsは、高品質な家具を提供する家具店です。豊富な品揃えと手頃な価格で、お客様のインテリアに最適な家具を見つけてください。" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap"
+    rel="stylesheet" />
+  <!-- ファビコン -->
+  <link rel="icon" href="favicon.ico" />
+  <link rel="apple-touch-icon" href="./assets/images/common/favicon.png" sizes="180x180">
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <!-- css -->
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <!-- JavaScript -->
+  <script defer src="https://code.jquery.com/jquery-1.9.1.min.js"
+    integrity="sha256-wS9gmOZBqsqWxgIVgA8Y9WcQOa7PgSIX+rPA0VL2rbQ=" crossorigin="anonymous"></script>
+  <script defer src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js"></script>
 
-    <header class="header top-header js-header">
-      <div class="header__inner">
-        <h1 class="header__logo">
-          <a href="/" class="header__logoLink">
-            <img src="./assets/images/common/logo.svg" alt="ロゴ画像" />
-          </a>
-        </h1>
-        <div class="header__drawer hamburger js-hamburger">
-          <span></span>
-          <span></span>
-        </div>
-        <nav class="header__nav nav">
-          <div class="nav__container">
-            <div class="nav__wrapper">
-              <div class="nav__logo">
-                <a href="/" class="header__logoLink">
-                  <img src="./assets/images/common/logo.svg" alt="ロゴ画像" />
-                </a>
-              </div>
-              <ul class="nav__items">
-                <li class="nav__item">
-                  <a href="page-about.html">
-                    <p class="nav__en-title">About</p>
-                    <p class="nav__jp-title">私たちについて</p>
-                  </a>
-                </li>
-                <li class="nav__item">
-                  <a href="page-products.html">
-                    <p class="nav__en-title">Products</p>
-                    <p class="nav__jp-title">商品紹介</p>
-                  </a>
-                </li>
-                <li class="nav__item">
-                  <a href="page-works.html">
-                    <p class="nav__en-title">Works</p>
-                    <p class="nav__jp-title">納品事例</p>
-                  </a>
-                </li>
-                <li class="nav__item">
-                  <a href="page-company.html">
-                    <p class="nav__en-title">Company</p>
-                    <p class="nav__jp-title">会社概要</p>
-                  </a>
-                </li>
-                <li class="nav__item">
-                  <a href="page-news.html">
-                    <p class="nav__en-title">News</p>
-                    <p class="nav__jp-title">ニュース</p>
-                  </a>
-                </li>
-                <li class="nav__item">
-                  <a href="page-contact.html">
-                    <p class="nav__en-title">Contact</p>
-                    <p class="nav__jp-title">お問い合わせ</p>
-                  </a>
-                </li>
-              </ul>
-              <div class="nav__sns">
-                <div class="nav__sns-instagram">
-                  <a href="https://www.instagram.com" target="_blank">
-                    <img
-                      src="./assets/images/common/instagram.png"
-                      alt="instagram"
-                    />
-                  </a>
-                </div>
-                <div class="nav__sns-twitter">
-                  <a href="https://twitter.com/?lang=ja" target="_blank">
-                    <img
-                      src="./assets/images/common/twitter.png"
-                      alt="twitter"
-                    />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </nav>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+  <script defer src="./assets/js/jquery.inview.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script defer src="./assets/js/script.js"></script>
+</head>
+
+<body>
+  <!---- header ---->
+
+  <header class="header top-header js-header">
+    <div class="header__inner">
+      <h1 class="header__logo">
+        <a href="/" class="header__logoLink">
+          <img src="./assets/images/common/logo.svg" alt="ロゴ画像" />
+        </a>
+      </h1>
+      <div class="header__drawer hamburger js-hamburger">
+        <span></span>
+        <span></span>
       </div>
-    </header>
-    <main>
-      <!-- 下層ページのメインビュー -->
-
-      <section class="sub-mv">
-        <div class="sub-mv__inner inner">
-          <h1 class="sub-mv__title">company</h1>
-          <div class="sub-mv__container">
-            <div class="sub-mv__sns u-desktop">
-              <div class="sub-mv__sns-instagram">
+      <nav class="header__nav nav">
+        <div class="nav__container">
+          <div class="nav__wrapper">
+            <div class="nav__logo">
+              <a href="/" class="header__logoLink">
+                <img src="./assets/images/common/logo.svg" alt="ロゴ画像" />
+              </a>
+            </div>
+            <ul class="nav__items">
+              <li class="nav__item">
+                <a href="page-about.html">
+                  <p class="nav__en-title">About</p>
+                  <p class="nav__jp-title">私たちについて</p>
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="page-products.html">
+                  <p class="nav__en-title">Products</p>
+                  <p class="nav__jp-title">商品紹介</p>
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="page-works.html">
+                  <p class="nav__en-title">Works</p>
+                  <p class="nav__jp-title">納品事例</p>
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="page-company.html">
+                  <p class="nav__en-title">Company</p>
+                  <p class="nav__jp-title">会社概要</p>
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="page-news.html">
+                  <p class="nav__en-title">News</p>
+                  <p class="nav__jp-title">ニュース</p>
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="page-contact.html">
+                  <p class="nav__en-title">Contact</p>
+                  <p class="nav__jp-title">お問い合わせ</p>
+                </a>
+              </li>
+            </ul>
+            <div class="nav__sns">
+              <div class="nav__sns-instagram">
                 <a href="https://www.instagram.com" target="_blank">
-                  <img
-                    src="./assets/images/common/instagram.png"
-                    alt="instagram"
-                  />
+                  <img src="./assets/images/common/instagram.png" alt="instagram" />
                 </a>
               </div>
-              <div class="sub-mv__sns-twitter">
+              <div class="nav__sns-twitter">
                 <a href="https://twitter.com/?lang=ja" target="_blank">
                   <img src="./assets/images/common/twitter.png" alt="twitter" />
                 </a>
               </div>
             </div>
-            <div class="sub-mv__img">
-              <picture>
-                <source
-                  media="(max-width: 767px)"
-                  srcset="./assets/images/common/company-mv_sp.jpg"
-                  type="image/jpeg"
-                />
-                <source
-                  media="(min-width: 768px)"
-                  srcset="./assets/images/common/company-mv_pc.jpg"
-                  type="image/jpeg"
-                />
-                <img
-                  src="./assets/images/common/company-mv_sp.jpg"
-                  alt="おしゃれなインテリアを置いた部屋の様子"
-                />
-              </picture>
-            </div>
           </div>
         </div>
-      </section>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <!-- 下層ページのメインビュー -->
 
-      <!-- page-company -->
-
-      <section class="page-company sub-company">
-        <div class="page-company__inner inner">
-          <div class="page-company__profile company-profile">
-            <dl class="company-profile__list">
-              <dt class="company-profile__term">会社名</dt>
-              <dd class="company-profile__description">
-                株式会社Code&nbsp;Ups
-              </dd>
-            </dl>
-            <dl class="company-profile__list">
-              <dt class="company-profile__term">所在地</dt>
-              <dd class="company-profile__description">
-                <p class="company-profile__text">〒540-0002</p>
-                <p class="company-profile__text-bottom">
-                  大阪府大阪市中央区大阪城1-1
-                </p>
-              </dd>
-            </dl>
-            <dl class="company-profile__list">
-              <dt class="company-profile__term">連絡先</dt>
-              <dd class="company-profile__description">
-                <a href="tel:00001112222">TEL&emsp;0000-111-2222</a>
-                <p class="company-profile__text-bottom">
-                  FAX&emsp;0000-111-3333
-                </p>
-              </dd>
-            </dl>
-            <dl class="company-profile__list">
-              <dt class="company-profile__term">創業年月日</dt>
-              <dd class="company-profile__description">令和3年11月1日</dd>
-            </dl>
-            <dl class="company-profile__list">
-              <dt class="company-profile__term">設立年月日</dt>
-              <dd class="company-profile__description">令和4年11月1日</dd>
-            </dl>
-            <dl class="company-profile__list">
-              <dt class="company-profile__term">資本金</dt>
-              <dd class="company-profile__description">800万円</dd>
-            </dl>
-            <dl class="company-profile__list">
-              <dt class="company-profile__term">代表取締役</dt>
-              <dd class="company-profile__description">松村&emsp;ひろき</dd>
-            </dl>
-            <dl class="company-profile__list">
-              <dt class="company-profile__term">役員数</dt>
-              <dd class="company-profile__description">3名</dd>
-            </dl>
-            <dl class="company-profile__list">
-              <dt class="company-profile__term">従業員数</dt>
-              <dd class="company-profile__description">14名</dd>
-            </dl>
-            <dl class="company-profile__list">
-              <dt class="company-profile__term">主要取引銀行</dt>
-              <dd class="company-profile__description">大阪信用金庫</dd>
-            </dl>
-          </div>
-          <div class="page-company__access">
-            <div class="page-company__header section-header">
-              <p class="section-header__engtitle">access</p>
-              <h2 class="section-header__jptitle">アクセス</h2>
-              <p class="section-header__text section-header__text--mt">
-                〒540-0002&nbsp;大阪府大阪市中央区大阪城１−１
-              </p>
-            </div>
-            <div class="page-company__access__map">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.7915058668837!2d135.5257176!3d34.6852112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e0cd373dfa55%3A0x19bc8e797f4318ce!2z44CSNTQwLTAwMDIg5aSn6Ziq5bqc5aSn6Ziq5biC5Lit5aSu5Yy65aSn6Ziq5Z-O77yR4oiS77yR!5e0!3m2!1sja!2sjp!4v1700947372362!5m2!1sja!2sjp"
-                width="600"
-                height="450"
-                style="border: 0"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-    <!---- footer ---->
-
-    <footer class="footer top-footer">
-      <div class="footer__inner">
-        <div class="footer__container">
-          <div class="footer__company">
-            <div class="footer__company-header section-header">
-              <p class="section-header__engtitle">company</p>
-              <h2
-                class="section-header__jptitle section-header__jptitle--footer"
-              >
-                会社概要
-              </h2>
-            </div>
-            <div class="footer__company-button">
-              <a href="page-company.html" class="section-button">view more</a>
-            </div>
-          </div>
-          <div class="footer__contact">
-            <div class="footer__contact-header section-header">
-              <p class="section-header__engtitle">contact</p>
-              <h2
-                class="section-header__jptitle section-header__jptitle--footer"
-              >
-                お問い合わせ
-              </h2>
-            </div>
-            <div class="footer__contact-button">
-              <a href="page-contact.html" class="section-button">view more</a>
-            </div>
-          </div>
-        </div>
-        <div class="footer__wrapper">
-          <div class="footer__left">
-            <div class="footer__logo">
-              <a href="/" class="footer__logoLink">
-                <img src="./assets/images/common/logo.svg" alt="ロゴ画像" />
+    <section class="sub-mv">
+      <div class="sub-mv__inner inner">
+        <h1 class="sub-mv__title">company</h1>
+        <div class="sub-mv__container">
+          <div class="sub-mv__sns u-desktop">
+            <div class="sub-mv__sns-instagram">
+              <a href="https://www.instagram.com" target="_blank">
+                <img src="./assets/images/common/instagram.png" alt="instagram" />
               </a>
             </div>
-            <ul class="footer__info-lists">
-              <li class="footer__info-list">株式会社 Code Ups</li>
-              <li class="footer__info-list">東京都港区1-1</li>
-              <a href="tel:011011011" class="footer__info-list"
-                >TEL:011-011-011</a
-              >
-              <li class="footer__info-list">受付時間9:00-17:00</li>
-            </ul>
+            <div class="sub-mv__sns-twitter">
+              <a href="https://twitter.com/?lang=ja" target="_blank">
+                <img src="./assets/images/common/twitter.png" alt="twitter" />
+              </a>
+            </div>
           </div>
-          <div class="footer__right">
-            <div class="footer__nav">
-              <a class="footer__nav-home" href="/">Home</a>
-              <ul class="footer__nav-items">
-                <li class="footer__nav-item">
-                  <a href="page-about.html">About</a>
-                </li>
-                <li class="footer__nav-item">
-                  <a href="page-products.html">Products</a>
-                </li>
-                <li class="footer__nav-item">
-                  <a href="page-works.html">Works</a>
-                </li>
-                <li class="footer__nav-item">
-                  <a href="page-company.html">Company</a>
-                </li>
-                <li class="footer__nav-item">
-                  <a href="page-news.html">News</a>
-                </li>
-                <li class="footer__nav-item">
-                  <a href="page-contact.html">Contact</a>
-                </li>
-              </ul>
-            </div>
-            <div class="footer__copyright">
-              <small>&copy;2023 code ups.</small>
-            </div>
+          <div class="sub-mv__img">
+            <picture>
+              <source media="(max-width: 767px)" srcset="./assets/images/common/company-mv_sp.jpg" type="image/jpeg" />
+              <source media="(min-width: 768px)" srcset="./assets/images/common/company-mv_pc.jpg" type="image/jpeg" />
+              <img src="./assets/images/common/company-mv_sp.jpg" alt="おしゃれなインテリアを置いた部屋の様子" />
+            </picture>
           </div>
         </div>
       </div>
-    </footer>
-  </body>
+    </section>
+
+    <!-- page-company -->
+
+    <section class="page-company sub-company">
+      <div class="page-company__inner inner">
+        <div class="page-company__profile company-profile">
+          <dl class="company-profile__list">
+            <dt class="company-profile__term">会社名</dt>
+            <dd class="company-profile__description">
+              株式会社Code&nbsp;Ups
+            </dd>
+          </dl>
+          <dl class="company-profile__list">
+            <dt class="company-profile__term">所在地</dt>
+            <dd class="company-profile__description">
+              <p class="company-profile__text">〒540-0002</p>
+              <p class="company-profile__text-bottom">
+                大阪府大阪市中央区大阪城1-1
+              </p>
+            </dd>
+          </dl>
+          <dl class="company-profile__list">
+            <dt class="company-profile__term">連絡先</dt>
+            <dd class="company-profile__description">
+              <a href="tel:00001112222">TEL&emsp;0000-111-2222</a>
+              <p class="company-profile__text-bottom">
+                FAX&emsp;0000-111-3333
+              </p>
+            </dd>
+          </dl>
+          <dl class="company-profile__list">
+            <dt class="company-profile__term">創業年月日</dt>
+            <dd class="company-profile__description">令和3年11月1日</dd>
+          </dl>
+          <dl class="company-profile__list">
+            <dt class="company-profile__term">設立年月日</dt>
+            <dd class="company-profile__description">令和4年11月1日</dd>
+          </dl>
+          <dl class="company-profile__list">
+            <dt class="company-profile__term">資本金</dt>
+            <dd class="company-profile__description">800万円</dd>
+          </dl>
+          <dl class="company-profile__list">
+            <dt class="company-profile__term">代表取締役</dt>
+            <dd class="company-profile__description">松村&emsp;ひろき</dd>
+          </dl>
+          <dl class="company-profile__list">
+            <dt class="company-profile__term">役員数</dt>
+            <dd class="company-profile__description">3名</dd>
+          </dl>
+          <dl class="company-profile__list">
+            <dt class="company-profile__term">従業員数</dt>
+            <dd class="company-profile__description">14名</dd>
+          </dl>
+          <dl class="company-profile__list">
+            <dt class="company-profile__term">主要取引銀行</dt>
+            <dd class="company-profile__description">大阪信用金庫</dd>
+          </dl>
+        </div>
+        <div class="page-company__access">
+          <div class="page-company__header section-header">
+            <p class="section-header__engtitle">access</p>
+            <h2 class="section-header__jptitle">アクセス</h2>
+            <p class="section-header__text section-header__text--mt">
+              〒540-0002&nbsp;大阪府大阪市中央区大阪城１−１
+            </p>
+          </div>
+          <div class="page-company__access__map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.7915058668837!2d135.5257176!3d34.6852112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e0cd373dfa55%3A0x19bc8e797f4318ce!2z44CSNTQwLTAwMDIg5aSn6Ziq5bqc5aSn6Ziq5biC5Lit5aSu5Yy65aSn6Ziq5Z-O77yR4oiS77yR!5e0!3m2!1sja!2sjp!4v1700947372362!5m2!1sja!2sjp"
+              width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!---- footer ---->
+
+  <footer class="footer top-footer">
+    <div class="footer__inner">
+      <div class="footer__container">
+        <div class="footer__company">
+          <div class="footer__company-header section-header">
+            <p class="section-header__engtitle">company</p>
+            <h2 class="section-header__jptitle section-header__jptitle--footer">
+              会社概要
+            </h2>
+          </div>
+          <div class="footer__company-button">
+            <a href="page-company.html" class="section-button">view more</a>
+          </div>
+        </div>
+        <div class="footer__contact">
+          <div class="footer__contact-header section-header">
+            <p class="section-header__engtitle">contact</p>
+            <h2 class="section-header__jptitle section-header__jptitle--footer">
+              お問い合わせ
+            </h2>
+          </div>
+          <div class="footer__contact-button">
+            <a href="page-contact.html" class="section-button">view more</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__wrapper">
+        <div class="footer__left">
+          <div class="footer__logo">
+            <a href="/" class="footer__logoLink">
+              <img src="./assets/images/common/logo.svg" alt="ロゴ画像" />
+            </a>
+          </div>
+          <ul class="footer__info-lists">
+            <li class="footer__info-list">株式会社 Code Ups</li>
+            <li class="footer__info-list">東京都港区1-1</li>
+            <a href="tel:011011011" class="footer__info-list">TEL:011-011-011</a>
+            <li class="footer__info-list">受付時間9:00-17:00</li>
+          </ul>
+        </div>
+        <div class="footer__right">
+          <div class="footer__nav">
+            <a class="footer__nav-home" href="/">Home</a>
+            <ul class="footer__nav-items">
+              <li class="footer__nav-item">
+                <a href="page-about.html">About</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="page-products.html">Products</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="page-works.html">Works</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="page-company.html">Company</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="page-news.html">News</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="page-contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__copyright">
+            <small>&copy;2023 code ups.</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
 </html>
