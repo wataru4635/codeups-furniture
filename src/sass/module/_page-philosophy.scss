@@ -6,7 +6,7 @@
   @include mq('md') {
     padding-top: rem(40);
     padding-bottom: rem(125);
-
+    overflow-x: hidden;
   }
 }
 

@@ -1,6 +1,7 @@
 @use 'global' as *;
 
 .products {
+  overflow-x: hidden;
   position: relative;
 }
 

@@ -1,4 +1,4 @@
-@use 'global' as *;
+@use 'global'as *;
 
 /* モーダルおよびモーダルをトリガーする要素の一般的なスタイル */
 .gallery__modal {
@@ -47,26 +47,28 @@
 
 .gallery__images--twocolumn {
   & {
-    .gallery__img:nth-child(8n+1),
-.gallery__img:nth-child(8n),
-.gallery__img:nth-child(8n+4),
-.gallery__img:nth-child(8n+5) {
 
-    grid-column: span 8;
-}
+    .gallery__img:nth-child(8n+1),
+    .gallery__img:nth-child(8n),
+    .gallery__img:nth-child(8n+4),
+    .gallery__img:nth-child(8n+5) {
+
+      grid-column: span 8;
+    }
   }
 }
 
 .gallery__images--twocolumn {
   & {
+
     .gallery__img:nth-child(8n+2),
-.gallery__img:nth-child(8n+3),
-.gallery__img:nth-child(8n+6),
-.gallery__img:nth-child(8n+7) {
+    .gallery__img:nth-child(8n+3),
+    .gallery__img:nth-child(8n+6),
+    .gallery__img:nth-child(8n+7) {
 
-    grid-column: span 4;
+      grid-column: span 4;
 
-}
+    }
   }
 }
 
@@ -121,4 +123,3 @@
     object-fit: cover;
   }
 }
-
